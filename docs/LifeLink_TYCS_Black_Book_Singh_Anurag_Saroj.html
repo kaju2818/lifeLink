@@ -1,0 +1,2239 @@
+﻿<!DOCTYPE html><html><head><meta charset='UTF-8'><title>LifeLink Black Book</title>
+<style>
+@page { size: A4 portrait; margin: 25mm 20mm 25mm 25mm; }
+body { font-family: 'Times New Roman', serif; font-size: 11.5pt; line-height: 1.55; color: #111; text-align: justify; margin: 0; padding: 0; }
+.page-break { page-break-before: always; break-before: page; }
+h1 { font-size: 17pt; font-weight: bold; margin-top: 25px; margin-bottom: 12px; color: #0f172a; border-bottom: 2px solid #0f172a; padding-bottom: 4px; }
+h2 { font-size: 14pt; font-weight: bold; margin-top: 20px; margin-bottom: 10px; color: #1e293b; }
+h3 { font-size: 12.5pt; font-weight: bold; margin-top: 15px; margin-bottom: 6px; color: #334155; }
+h4 { font-size: 11.5pt; font-weight: bold; margin-top: 10px; margin-bottom: 4px; color: #475569; }
+p { margin: 8px 0; }
+li { margin-bottom: 5px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #475569; padding: 6px 9px; text-align: left; vertical-align: top; }
+th { background-color: #f1f5f9; font-weight: bold; color: #0f172a; }
+tr:nth-child(even) td { background-color: #f8fafc; }
+.figure-box { text-align: center; margin: 22px 0; page-break-inside: avoid; }
+.figure-box img { max-width: 95%; max-height: 480px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.figure-caption { font-size: 10pt; font-style: italic; font-weight: bold; margin-top: 6px; color: #334155; }
+pre { padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; background: #f1f5f9; font-family: 'Consolas', monospace; font-size: 8.5pt; white-space: pre-wrap; page-break-inside: avoid; }
+</style></head><body>
+<h1>A MINI PROJECT REPORT (BLACK BOOK)</h1>
+<h2>ON</h2>
+<div class='page-break'></div>
+<h1><b>LifeLink — Healthcare Availability & Emergency Assistance</b></h1>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3><b>Submitted in partial fulfillment of the requirements for the award of the Degree of</b></h3>
+<h3><b>Bachelor of Science in Computer Science (B.Sc. CS — TYCS)</b></h3>
+<h3><b>University of Mumbai</b></h3>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><b>Submitted by:</b></p>
+<h3><b>SINGH ANURAG SAROJ</b></h3>
+<p><b>Roll No: 102</b> &nbsp;|&nbsp; <b>Seat No: [Seat Number]</b> &nbsp;|&nbsp; <b>PRN: [PRN Number]</b></p>
+<p><br/></p>
+<p><b>Under the Guidance of:</b></p>
+<p><b>MRS. JYOTI JADHAV</b></p>
+<p><i>Assistant Professor, Department of Computer Science</i></p>
+<p><br/></p>
+<p><b>Head of Department:</b></p>
+<p><b>MRS. PRIYANKA BRID</b></p>
+<p><i>Head, Department of Computer Science</i></p>
+<p><br/></p>
+<p><b>DEPARTMENT OF COMPUTER SCIENCE</b></p>
+<p><b>VIVA COLLEGE OF ARTS, COMMERCE & SCIENCE</b></p>
+<p><i>(Affiliated to the University of Mumbai)</i></p>
+<p><b>Virar (West), Pin - 401303, Maharashtra</b></p>
+<p><b>Academic Year: 2026 – 2027</b></p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<h2>CERTIFICATE OF APPROVAL</h2>
+<p>This is to certify that the project entitled <b>"LifeLink — Healthcare Availability & Emergency Assistance"</b> is a bonafide work carried out by <b>SINGH ANURAG SAROJ</b> (Roll No: <b>102</b>) in partial fulfillment of the requirements for the award of the degree of <b>Bachelor of Science in Computer Science (TYCS - Semester VI)</b> of the <b>University of Mumbai</b> during the academic year 2026–2027.</p>
+<p><br/><br/></p>
+<p>__________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __________________________</p>
+<p><b>Mrs. Jyoti Jadhav</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Mrs. Priyanka Brid</b></p>
+<p><i>Project Guide</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>Head of Department</i></p>
+<p>Department of Computer Science &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Department of Computer Science</p>
+<p>VIVA College, Virar (W) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VIVA College, Virar (W)</p>
+<p><br/><br/></p>
+<p>__________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __________________________</p>
+<p><b>Internal Examiner</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>External Examiner</b></p>
+<p><b>Date:</b> [Date]</p>
+<p><b>Place:</b> Virar, Mumbai</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<h2>DECLARATION</h2>
+<p>I, <b>Singh Anurag Saroj</b>, student of <b>TYCS (Semester VI)</b>, Roll No. <b>102</b>, hereby declare that the mini-project report entitled <b>"LifeLink — Healthcare Availability & Emergency Assistance"</b> submitted to the Department of Computer Science, <b>VIVA College, Virar</b>, affiliated to the <b>University of Mumbai</b>, is an authentic record of my original work carried out under the guidance of <b>Mrs. Jyoti Jadhav</b>.</p>
+<p>This report has not been submitted previously to this or any other institution for the award of any degree or diploma.</p>
+<p><br/><br/></p>
+<p><b>SINGH ANURAG SAROJ</b></p>
+<p>Roll No: 102</p>
+<p>Department of Computer Science</p>
+<p>VIVA College, Virar (West)</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<h2>ACKNOWLEDGEMENT</h2>
+<p>I would like to express my sincere gratitude to my project guide, <b>[MRS. JYOTI JADHAV]</b>, for the valuable guidance, constant encouragement and timely feedback throughout the development of this mini project, <b>LifeLink — Healthcare Availability & Emergency Assistance Platform</b>.</p>
+<p>I am thankful to the Head of the Department, <b>[MRS. PRIYANKA BRID]</b>, and the faculty members of the Department of Computer Science of <b>[VIVA COLLEGE]</b> for providing the facilities and a supportive academic environment to complete this work.</p>
+<p>I also acknowledge the developers of the open-source tools and free services used in this project — <b>React.js, Vite, Tailwind CSS, Leaflet GIS, OpenStreetMap Nominatim, Google Firebase (Cloud Firestore & Authentication), Netlify Edge, and GitHub</b> — whose excellent documentation made the rapid implementation, testing, and deployment possible.</p>
+<p>Finally, I thank my family and friends for their continuous support and motivation.</p>
+<p><br/></p>
+<p><b>[SINGH ANURAG SAROJ]</b></p>
+<p>Roll No: 102 (TYCS)</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<h2>ABSTRACT</h2>
+<p>In acute medical emergencies, the critical window between trauma onset and clinical admission—frequently termed the <i>"Golden Hour"</i>—is routinely compromised by severe information asymmetry. Attendants, patients, and paramedics waste up to 45–90 minutes calling hospitals sequentially to verify vacant ICU beds, locating rare blood group donors through uncoordinated social media forwards, or searching for 24-hour pharmacies stocking emergency therapeutics.</p>
+<p><b>LifeLink</b> is a decentralized, real-time healthcare availability discovery and emergency triage assistance single-page application (SPA). Developed using React 18, Vite, Tailwind CSS, Leaflet GIS mapping, and a resilient dual-mode persistence architecture (Google Cloud Firestore integrated with a client-side reactive state engine), LifeLink unites four life-critical modules:</p>
+<p>1. <b>Voluntary Blood Donor Matching:</b> A geolocation-aware registry that indexes voluntary donors across eight ABO/Rh blood groups (`A+`, `A-`, `B+`, `B-`, `AB+`, `AB-`, `O+`, `O-`) with one-click emergency broadcast alerts.</p>
+<p>2. <b>Hospital Bed & ICU Triage Tracker:</b> Live tracking of Intensive Care Unit (ICU), Emergency Trauma, General Inpatient, and Pediatric beds, augmented with Oxygen readiness and Mechanical Ventilator telemetry indicators.</p>
+<p>3. <b>24/7 Pharmacy Stock Discovery:</b> Real-time inventory locator for urgent pharmaceuticals (e.g. Dolo 650, Augmentin 625 Duo, Asthalin Inhalers, Lantus Insulin, Telmikind Beta 50) with transparent Indian Rupee (₹) pricing and prescription flags.</p>
+<p>4. <b>1-Tap Emergency SOS Broadcast:</b> Unified emergency dispatch broadcasting GPS coordinates to nearby hospitals while providing instant direct-dial links to national helplines (<b>108 Ambulance</b>, <b>102 Maternal</b>, <b>1075 Health Helpline</b>, <b>112 Unified Emergency</b>).</p>
+<p>LifeLink implements strict Role-Based Access Control (RBAC) across five distinct stakeholder portals: Patients/Recipients, Voluntary Donors, Hospital Bed Managers, Pharmacists, and Governance Admins. Tested thoroughly across unit, black-box, and mobile responsive boundaries, LifeLink achieved sub-50ms UI transitions, zero API latency bottlenecks, and verified cross-device synchronization.</p>
+<p><b>Keywords:</b> healthcare availability, blood donor matching, ICU bed tracking, pharmacy stock, emergency SOS triage, React 18, Tailwind CSS, Leaflet GIS, Firebase Firestore, Role-Based Access Control (RBAC), GitHub Pages / Netlify.</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<h2>TABLE OF CONTENTS</h2>
+<table><thead><tr>
+<th>Chapter No.</th>
+<th>Chapter Title</th>
+<th>Page No.</th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td><b>Abstract</b></td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Acknowledgement</b></td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Table of Contents</b></td>
+<td>3</td>
+</tr>
+<tr>
+<td><b>1.</b></td>
+<td><b>Problem Identification & Feasibility Study</b></td>
+<td><b>5</b></td>
+</tr>
+<tr>
+<td></td>
+<td>1.1 Identification of a Real-World Problem</td>
+<td>5</td>
+</tr>
+<tr>
+<td></td>
+<td>1.2 Problem Justification</td>
+<td>5</td>
+</tr>
+<tr>
+<td></td>
+<td>1.3 Scope Definition</td>
+<td>6</td>
+</tr>
+<tr>
+<td></td>
+<td>1.4 Stakeholder Identification</td>
+<td>6</td>
+</tr>
+<tr>
+<td></td>
+<td>1.5 Feasibility Study</td>
+<td>6</td>
+</tr>
+<tr>
+<td></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;1.5.1 Technical Feasibility</td>
+<td>6</td>
+</tr>
+<tr>
+<td></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;1.5.2 Economic Feasibility</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;1.5.3 Operational Feasibility</td>
+<td>7</td>
+</tr>
+<tr>
+<td><b>2.</b></td>
+<td><b>Requirement Engineering</b></td>
+<td><b>8</b></td>
+</tr>
+<tr>
+<td></td>
+<td>2.1 Functional Requirements Specification</td>
+<td>8</td>
+</tr>
+<tr>
+<td></td>
+<td>2.2 Non-Functional Requirements</td>
+<td>8</td>
+</tr>
+<tr>
+<td></td>
+<td>2.3 Use-Case Analysis</td>
+<td>9</td>
+</tr>
+<tr>
+<td></td>
+<td>2.4 Requirement Prioritization</td>
+<td>10</td>
+</tr>
+<tr>
+<td></td>
+<td>2.5 Constraints and Assumptions</td>
+<td>10</td>
+</tr>
+<tr>
+<td><b>3.</b></td>
+<td><b>Software Development Life Cycle (SDLC) Planning</b></td>
+<td><b>12</b></td>
+</tr>
+<tr>
+<td></td>
+<td>3.1 Selection of SDLC Model</td>
+<td>12</td>
+</tr>
+<tr>
+<td></td>
+<td>3.2 Work Breakdown Structure (WBS)</td>
+<td>12</td>
+</tr>
+<tr>
+<td></td>
+<td>3.3 Gantt Chart</td>
+<td>13</td>
+</tr>
+<tr>
+<td></td>
+<td>3.4 Resource Planning & Risk Management</td>
+<td>13</td>
+</tr>
+<tr>
+<td><b>4.</b></td>
+<td><b>System Modeling Using UML</b></td>
+<td><b>15</b></td>
+</tr>
+<tr>
+<td></td>
+<td>4.1 Use Case Diagram</td>
+<td>15</td>
+</tr>
+<tr>
+<td></td>
+<td>4.2 Class Diagram</td>
+<td>15</td>
+</tr>
+<tr>
+<td></td>
+<td>4.3 Sequence Diagram</td>
+<td>16</td>
+</tr>
+<tr>
+<td></td>
+<td>4.4 Activity Diagram</td>
+<td>17</td>
+</tr>
+<tr>
+<td></td>
+<td>4.5 Entity Relationship (ER) Diagram</td>
+<td>19</td>
+</tr>
+<tr>
+<td></td>
+<td>4.6 Deployment Diagram</td>
+<td>20</td>
+</tr>
+<tr>
+<td></td>
+<td>4.7 Data Flow Diagram (DFD Level 0, 1, 2)</td>
+<td>20</td>
+</tr>
+<tr>
+<td><b>5.</b></td>
+<td><b>System Architecture Design</b></td>
+<td><b>24</b></td>
+</tr>
+<tr>
+<td></td>
+<td>5.1 Frontend Architecture</td>
+<td>24</td>
+</tr>
+<tr>
+<td></td>
+<td>5.2 Backend Architecture</td>
+<td>25</td>
+</tr>
+<tr>
+<td></td>
+<td>5.3 Database Schema Design</td>
+<td>27</td>
+</tr>
+<tr>
+<td></td>
+<td>5.4 Security Considerations</td>
+<td>28</td>
+</tr>
+<tr>
+<td><b>6.</b></td>
+<td><b>Application Development</b></td>
+<td><b>29</b></td>
+</tr>
+<tr>
+<td></td>
+<td>6.1 Frontend Implementation & UI Screens</td>
+<td>29</td>
+</tr>
+<tr>
+<td></td>
+<td>6.2 Backend & Storage Implementation</td>
+<td>38</td>
+</tr>
+<tr>
+<td></td>
+<td>6.3 Database Integration & Sync Engine</td>
+<td>39</td>
+</tr>
+<tr>
+<td></td>
+<td>6.4 Authentication and Validation</td>
+<td>39</td>
+</tr>
+<tr>
+<td></td>
+<td>6.5 Error Handling & Graceful Degradation</td>
+<td>40</td>
+</tr>
+<tr>
+<td><b>7.</b></td>
+<td><b>Integration & System Testing</b></td>
+<td><b>41</b></td>
+</tr>
+<tr>
+<td></td>
+<td>7.1 Unit Testing</td>
+<td>41</td>
+</tr>
+<tr>
+<td></td>
+<td>7.2 Black-Box Testing</td>
+<td>42</td>
+</tr>
+<tr>
+<td></td>
+<td>7.3 Integration Testing</td>
+<td>45</td>
+</tr>
+<tr>
+<td></td>
+<td>7.4 Test Case Preparation</td>
+<td>46</td>
+</tr>
+<tr>
+<td></td>
+<td>7.5 Bug Tracking Log</td>
+<td>46</td>
+</tr>
+<tr>
+<td><b>8.</b></td>
+<td><b>Application Deployment</b></td>
+<td><b>48</b></td>
+</tr>
+<tr>
+<td></td>
+<td>8.1 Cloud Deployment (Netlify & GitHub)</td>
+<td>48</td>
+</tr>
+<tr>
+<td></td>
+<td>8.2 Local Hosting</td>
+<td>48</td>
+</tr>
+<tr>
+<td></td>
+<td>8.3 Mobile APK Build (Capacitor / Bubblewrap)</td>
+<td>49</td>
+</tr>
+<tr>
+<td></td>
+<td>8.4 Server Configuration & Environment Setup</td>
+<td>49</td>
+</tr>
+<tr>
+<td></td>
+<td>8.5 Version Control Using GitHub</td>
+<td>49</td>
+</tr>
+<tr>
+<td><b>9.</b></td>
+<td><b>Performance & Security Testing</b></td>
+<td><b>51</b></td>
+</tr>
+<tr>
+<td></td>
+<td>9.1 Basic Load Testing & Benchmarking</td>
+<td>51</td>
+</tr>
+<tr>
+<td></td>
+<td>9.2 Input Validation Checks</td>
+<td>51</td>
+</tr>
+<tr>
+<td></td>
+<td>9.3 Security Validation & Access Control</td>
+<td>52</td>
+</tr>
+<tr>
+<td><b>10.</b></td>
+<td><b>Final Documentation</b></td>
+<td><b>53</b></td>
+</tr>
+<tr>
+<td></td>
+<td>10.1 Report Generation & Objective Evaluation</td>
+<td>53</td>
+</tr>
+<tr>
+<td></td>
+<td>10.2 User Manual (Public & Stakeholder Portals)</td>
+<td>54</td>
+</tr>
+<tr>
+<td></td>
+<td>10.3 Limitations</td>
+<td>57</td>
+</tr>
+<tr>
+<td></td>
+<td>10.4 Future Enhancements</td>
+<td>57</td>
+</tr>
+<tr>
+<td></td>
+<td>10.5 References</td>
+<td>58</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Appendix A: Complete Source Code</b></td>
+<td><b>59</b></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Appendix B: Worked Examples</b></td>
+<td><b>68</b></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Appendix C: Storage & Firebase API Operations</b></td>
+<td><b>71</b></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Appendix D: Extended Verification & Triage Log</b></td>
+<td><b>73</b></td>
+</tr>
+<tr>
+<td></td>
+<td><b>Appendix E: Data Dictionary and Glossary</b></td>
+<td><b>75</b></td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>1. Problem Identification & Feasibility Study</h1>
+<h3>1.1 Identification of a Real-World Problem</h3>
+<p>In metropolitan regions such as Mumbai and the Vasai-Virar municipal sector, sudden medical emergencies expose catastrophic communication gaps. When an acute trauma, road accident, cardiac arrest, or obstetric crisis strikes:</p>
+<p>1. <b>Critical Bed Search:</b> Attendants spend critical hours travelling from one nursing home to another only to find ICU beds fully occupied.</p>
+<p>2. <b>Blood Scarcity:</b> Patients needing urgent whole blood or single donor platelets (SDP) for negative blood groups (`O-`, `AB-`, `A-`) rely on WhatsApp forwards, leading to delayed transfusions.</p>
+<p>3. <b>Medicine Non-Availability:</b> Rare drugs, emergency salbutamol inhalers, cardiac medicines, and anti-rabies vaccines are not stocked in every corner chemist. Attendants frequently navigate closed pharmacies late at night.</p>
+<p>4. <b>Delayed Dispatch:</b> Emergency callers often fail to communicate landmark coordinates clearly over stressful phone calls.</p>
+<p>The core breakdown is not a total absence of medical beds or voluntary donors, but rather <b>information blindness</b>. Facilities have vacant beds, donors are nearby, and 24-hour pharmacies have stock, but no unified, real-time platform connects them instantly.</p>
+<h3>1.2 Problem Justification</h3>
+<p>* <b>The Golden Hour Rule:</b> Survival rates in emergency trauma drop precipitously for every 15-minute delay in intensive clinical admission. A unified vacancy tracker saves lives directly.</p>
+<p>* <b>Failure of Traditional Portals:</b> Static government portals update inventories once a week or month. Private appointment booking applications cater only to planned OPD consultations, ignoring emergency bed admission.</p>
+<p>* <b>Zero-Friction Access:</b> A patient in crisis cannot download a heavy 100 MB native application or navigate long registration wizards. A progressive web solution that loads in 1 second on mobile without installation is essential.</p>
+<p>* <b>Proximity Matching:</b> Distance matters immensely in acute medical transport. Map-based spatial discovery enables callers to identify the nearest facility within minutes.</p>
+<p>* <b>Local & Academic Relevance:</b> The project aligns directly with Indian national emergency standards (<b>108 Ambulance</b>, <b>104 Blood Helpline</b>, <b>1075 National Health Authority</b>) and demonstrates full-stack software engineering principles (React 18, RESTful GIS APIs, NoSQL Cloud Firestore, and RBAC security).</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>1.3 Scope Definition</h3>
+<p><b>Table 1: Project scope</b></p>
+<table><thead><tr>
+<th>In scope</th>
+<th>Out of scope (current version)</th>
+</tr></thead><tbody>
+<tr>
+<td>User registration, login, session management and role-based access control (RBAC).</td>
+<td>Centralized hospital electronic health record (EHR/EMR) full database integration.</td>
+</tr>
+<tr>
+<td>Live voluntary blood donor registry categorized by 8 ABO/Rh groups with distance and verification tags.</td>
+<td>Direct biometric or laboratory cross-matching verification.</td>
+</tr>
+<tr>
+<td>Hospital bed inventory tracker (General, ICU, Trauma Emergency, Pediatric) with Oxygen/Ventilator status.</td>
+<td>Automated payment gateway for hospital billing and insurance processing.</td>
+</tr>
+<tr>
+<td>24/7 Pharmacy medicine stock locator with ₹ pricing, stock alerts, and prescription requirements.</td>
+<td>E-commerce home delivery and courier rider dispatch.</td>
+</tr>
+<tr>
+<td>1-Tap Emergency SOS broadcast with OpenStreetMap GPS coordinate capture.</td>
+<td>Dedicated drone payload hardware dispatch.</td>
+</tr>
+<tr>
+<td>Interactive Leaflet GIS maps with custom hospital, pharmacy, and donor popups.</td>
+<td>Offline mesh radio telemetry (requires internet or mobile cellular data).</td>
+</tr>
+<tr>
+<td>5 Stakeholder Dashboards: Patient, Donor, Hospital Bed Manager, Pharmacist, Governance Admin.</td>
+<td>Audio-visual teleconsultation with specialized surgeons.</td>
+</tr>
+<tr>
+<td>Dual-mode resilient persistence: Cloud Firestore + Reactive Local Storage fallback.</td>
+<td>Multi-language localized content (current system interface is in English).</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>1.4 Stakeholder Identification</h3>
+<p><b>Table 2: Stakeholders</b></p>
+<table><thead><tr>
+<th>Stakeholder</th>
+<th>Role</th>
+<th>Interest / expectation</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Patient / Recipient (Public)</b></td>
+<td>Primary Consumer</td>
+<td>Locate nearest ICU bed, matching blood donor, or 24/7 chemist within seconds; trigger emergency SOS.</td>
+</tr>
+<tr>
+<td><b>Voluntary Blood Donor</b></td>
+<td>Lifesaving Contributor</td>
+<td>Receive nearby donation requests matching blood group; toggle status between Available and Resting.</td>
+</tr>
+<tr>
+<td><b>Hospital Triage Desk</b></td>
+<td>Healthcare Provider</td>
+<td>Broadcast live bed vacancy counts using simple (+ / -) controls; receive incoming trauma alerts.</td>
+</tr>
+<tr>
+<td><b>Pharmacy Chemist</b></td>
+<td>Retail Provider</td>
+<td>Maintain accurate stock counts of emergency drugs and operating hours.</td>
+</tr>
+<tr>
+<td><b>Governance Admin</b></td>
+<td>System Auditor</td>
+<td>Inspect donor verification badges, monitor emergency logs, synchronize cloud database, export backups.</td>
+</tr>
+<tr>
+<td><b>Project Developer (Anurag)</b></td>
+<td>Implementer</td>
+<td>Deliver a clean, responsive, architecturally robust, and fully tested web application.</td>
+</tr>
+<tr>
+<td><b>Project Guide & Examiners</b></td>
+<td>Academic Evaluator</td>
+<td>Verify compliance with software engineering standards, UML modeling, modularity, and test rigor.</td>
+</tr>
+<tr>
+<td><b>Cloud Services (Netlify / Firebase)</b></td>
+<td>External Infrastructure</td>
+<td>Deliver high-availability hosting, edge caching, identity tokens, and scalable document storage.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>1.5 Feasibility Study</h3>
+<h4>1.5.1 Technical Feasibility</h4>
+<p>The platform is developed using industry-standard, battle-tested modern web technologies:</p>
+<p>* <b>Frontend:</b> React 18.3 with Vite 5.2 enables instantaneous client-side rendering and module reloading.</p>
+<p>* <b>Styling:</b> Tailwind CSS compiles into a compact utility stylesheet (<65 KB), eliminating heavy CSS overhead.</p>
+<p>* <b>Mapping:</b> Leaflet 1.9 with OpenStreetMap Nominatim reverse geocoding provides high-performance interactive GIS mapping at zero licensing cost.</p>
+<p>* <b>Backend & Storage:</b> Google Cloud Firestore and Firebase Auth provide an asynchronous, scalable, NoSQL database with zero server management overhead.</p>
+<p>* <b>Fallback Layer:</b> Client-side reactive storage with custom event dispatching guarantees operational availability even during network disruptions.</p>
+<p>Every required library is lightweight, open-source, and thoroughly documented. Therefore, the project is <b>technically feasible</b>.</p>
+<h4>1.5.2 Economic Feasibility</h4>
+<p><b>Table 3: Estimated cost of the prototype</b></p>
+<table><thead><tr>
+<th>Item</th>
+<th>Choice</th>
+<th>Estimated cost</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Development Machine</b></td>
+<td>Existing PC / Laptop (Windows 11)</td>
+<td>Nil (Already available)</td>
+</tr>
+<tr>
+<td><b>Frontend Framework & IDE</b></td>
+<td>React.js, Tailwind CSS, VS Code</td>
+<td>Nil (Free & Open Source)</td>
+</tr>
+<tr>
+<td><b>Database & Cloud Auth</b></td>
+<td>Google Firebase (Spark Free Tier)</td>
+<td>Nil (Up to 50k reads/day)</td>
+</tr>
+<tr>
+<td><b>Geospatial Mapping</b></td>
+<td>Leaflet JS & OpenStreetMap</td>
+<td>Nil (Open-source GIS)</td>
+</tr>
+<tr>
+<td><b>Cloud Hosting</b></td>
+<td>Netlify Edge / GitHub Pages</td>
+<td>Nil (Free tier with HTTPS)</td>
+</tr>
+<tr>
+<td><b>Version Control</b></td>
+<td>GitHub Public Repository</td>
+<td>Nil (Free unlimited commits)</td>
+</tr>
+<tr>
+<td><b>Total (Prototype)</b></td>
+<td></td>
+<td><b>₹ 0.00 (Zero Development Cost)</b></td>
+</tr>
+</tbody></table>
+<p>Because all development tools, cloud tiers, and libraries offer robust free-tier quotas suitable for academic and prototype operation, the project is <b>economically feasible</b>.</p>
+<h4>1.5.3 Operational Feasibility</h4>
+<p>LifeLink requires no specialized training for end-users:</p>
+<p>* Public users enter the platform and immediately view self-explanatory discovery tools (Blood, Beds, Medicines, SOS).</p>
+<p>* Hospital staff update bed counts via single-click <b>(+)</b> and <b>(-)</b> buttons on their dashboard.</p>
+<p>* Donors toggle their availability via an intuitive switch.</p>
+<p>* The application runs in any modern browser on both budget smartphones and desktop PCs. Therefore, the project is <b>operationally feasible</b>.</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>2. Requirement Engineering</h1>
+<h3>2.1 Functional Requirements Specification</h3>
+<p><b>Table 4: Functional requirements</b></p>
+<table><thead><tr>
+<th>ID</th>
+<th>Requirement Description</th>
+<th>Priority</th>
+</tr></thead><tbody>
+<tr>
+<td><b>FR-01</b></td>
+<td>A visitor shall be able to register with name, email, password, role, contact phone, and address.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-02</b></td>
+<td>A registered user shall be able to authenticate securely and log in to their assigned role dashboard.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-03</b></td>
+<td>The system shall provide 1-click instant demo logins for all 5 roles for evaluation and demonstration.</td>
+<td><b>Could</b></td>
+</tr>
+<tr>
+<td><b>FR-04</b></td>
+<td>The system shall filter blood donors by 8 blood groups (`A+`, `A-`, `B+`, `B-`, `AB+`, `AB-`, `O+`, `O-`) and geographic area.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-05</b></td>
+<td>A voluntary donor shall be able to toggle their status between `AVAILABLE` and `RECENTLY_DONATED` (Resting).</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-06</b></td>
+<td>A patient shall be able to broadcast an emergency blood request with patient name, required units, and hospital name.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-07</b></td>
+<td>The system shall track available and total bed counts across ICU, Emergency Trauma, General, and Pediatric wards.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-08</b></td>
+<td>Hospital admins shall be able to increment and decrement bed vacancies in real time using (+) and (-) controls.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-09</b></td>
+<td>The hospital finder shall flag facilities equipped with continuous Oxygen Support and Mechanical Ventilators.</td>
+<td><b>Should</b></td>
+</tr>
+<tr>
+<td><b>FR-10</b></td>
+<td>The system shall catalogue pharmacy medicines with generic active salt, commercial brand, pack size, dosage form, and ₹ price.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-11</b></td>
+<td>The pharmacy module shall filter stores open 24 Hours and distinguish prescription (`Rx Required`) medications.</td>
+<td><b>Should</b></td>
+</tr>
+<tr>
+<td><b>FR-12</b></td>
+<td>The system shall capture user GPS coordinates and reverse-geocode them to city and address landmarks via Nominatim.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-13</b></td>
+<td>The system shall transmit emergency SOS triage broadcasts with patient contact, location, and clinical summary.</td>
+<td><b>Must</b></td>
+</tr>
+<tr>
+<td><b>FR-14</b></td>
+<td>The system shall provide direct one-touch telephone dialers for national emergency helplines (108, 102, 1075, 112).</td>
+<td><b>Should</b></td>
+</tr>
+<tr>
+<td><b>FR-15</b></td>
+<td>The Governance Admin shall be able to evaluate and grant verified trust badges to newly registered voluntary donors.</td>
+<td><b>Should</b></td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>2.2 Non-Functional Requirements</h3>
+<p><b>Table 5: Non-functional requirements</b></p>
+<table><thead><tr>
+<th>Category</th>
+<th>Requirement</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Performance</b></td>
+<td>Page initial bundle load under 1.5 seconds; client-side route switching under 50 milliseconds; search query filtering in under 5 ms.</td>
+</tr>
+<tr>
+<td><b>Security</b></td>
+<td>Role-Based Access Control enforced on both router and context layers; passwords managed via secure hashing; zero plaintext keys committed.</td>
+</tr>
+<tr>
+<td><b>Usability</b></td>
+<td>Medical visual hierarchy using high-contrast design: Brand Teal (`#0d9488`) for primary navigation, Rose Red (`#e11d48`) for emergencies.</td>
+</tr>
+<tr>
+<td><b>Responsiveness</b></td>
+<td>Fluid grid layout adapting seamlessly across mobile (320px–480px), tablet (768px), and wide desktop displays (1536px+).</td>
+</tr>
+<tr>
+<td><b>Reliability</b></td>
+<td>Dual-mode persistence: operations persist to client reactive state and synchronize with Cloud Firestore whenever online.</td>
+</tr>
+<tr>
+<td><b>Maintainability</b></td>
+<td>Clean React modular architecture separating concerns across `context/`, `components/`, `pages/`, `services/`, and `data/`.</td>
+</tr>
+<tr>
+<td><b>Portability</b></td>
+<td>Pure web standards implementation compatible across Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari on iOS/Android.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>2.3 Use-Case Analysis</h3>
+<p><b>Table 6: Use-case description - Register / Login</b></p>
+<table><thead><tr>
+<th>Field</th>
+<th>UC-01: Register / Login</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Actor</b></td>
+<td>Visitor / Patient / Donor / Healthcare Staff; Firebase Auth (Secondary)</td>
+</tr>
+<tr>
+<td><b>Pre-condition</b></td>
+<td>User has opened the LifeLink platform and has no active authenticated session.</td>
+</tr>
+<tr>
+<td><b>Main flow</b></td>
+<td>1. User navigates to `/login` or `/register`.<br/>2. Selects intended role (Recipient, Donor, Hospital, Pharmacy, Admin).<br/>3. Enters email and password (or selects a 1-click Demo Account).<br/>4. Application verifies format and initiates authentication.<br/>5. Auth context saves session token and user profile into state and `localStorage`.<br/>6. User is redirected to their specific role dashboard (e.g. `/donor/dashboard`).</td>
+</tr>
+<tr>
+<td><b>Alternate flows</b></td>
+<td>A1: Invalid email format or password under 6 characters $\rightarrow$ error message rendered.<br/>A2: Account exists $\rightarrow$ prompts user to switch to Login tab.<br/>A3: Cloud auth network drop $\rightarrow$ gracefully executes against local registered database.</td>
+</tr>
+<tr>
+<td><b>Post-condition</b></td>
+<td>Authenticated session active; Navbar displays user avatar, role badge, notifications, and Logout button.</td>
+</tr>
+</tbody></table>
+<p><br/></p>
+<p><b>Table 7: Use-case description - Broadcast Emergency Blood Request</b></p>
+<table><thead><tr>
+<th>Field</th>
+<th>UC-02: Broadcast Emergency Blood Request</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Actor</b></td>
+<td>Patient / Attendant; Voluntary Donors (Secondary)</td>
+</tr>
+<tr>
+<td><b>Pre-condition</b></td>
+<td>User requires emergency blood transfusion and accesses `/blood-finder`.</td>
+</tr>
+<tr>
+<td><b>Main flow</b></td>
+<td>1. User clicks "Broadcast Blood Request" (or selects a specific donor).<br/>2. Fills in Patient Name, Blood Group (e.g., `O-`), Units Needed, and Hospital Name.<br/>3. Selects urgency level (`CRITICAL`, `URGENT`, `STANDARD`).<br/>4. Clicks "Dispatch Request Now".<br/>5. System creates record in `lifelink_blood_requests` table.<br/>6. Dispatches notification to matching donors' notification drawer.<br/>7. Shows green confirmation toast.</td>
+</tr>
+<tr>
+<td><b>Alternate flows</b></td>
+<td>A1: Required fields blank $\rightarrow$ form validation prevents submission.<br/>A2: User location unavailable $\rightarrow$ defaults to central city coordinates.</td>
+</tr>
+<tr>
+<td><b>Post-condition</b></td>
+<td>Request is active; displayed in Patient Dashboard and matching Donors' incoming alert queues.</td>
+</tr>
+</tbody></table>
+<p><br/></p>
+<p><b>Table 8: Use-case description - Live Bed Inventory Adjustment</b></p>
+<table><thead><tr>
+<th>Field</th>
+<th>UC-03: Live Bed Inventory Adjustment</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Actor</b></td>
+<td>Hospital Bed Manager / On-Duty Nurse</td>
+</tr>
+<tr>
+<td><b>Pre-condition</b></td>
+<td>User logged in with `role: HOSPITAL` at `/hospital/dashboard`.</td>
+</tr>
+<tr>
+<td><b>Main flow</b></td>
+<td>1. Hospital admin opens Bed Inventory Control Station.<br/>2. Views current counts for ICU, Emergency, General, and Pediatric beds.<br/>3. Clicks <b>(+)</b> or <b>(-)</b> to record emergency admissions or bed discharges.<br/>4. Clicks "Broadcast Bed Updates".<br/>5. Data context writes updates to storage and fires `lifelink:storage_updated` event.<br/>6. Public `/hospital-finder` immediately reflects the updated available vacancy count.</td>
+</tr>
+<tr>
+<td><b>Alternate flows</b></td>
+<td>A1: Decrementing below 0 $\rightarrow$ prevented (floor at 0).<br/>A2: Incrementing above total capacity $\rightarrow$ capped at facility total.</td>
+</tr>
+<tr>
+<td><b>Post-condition</b></td>
+<td>Hospital bed status updated across all connected client browsers.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>2.4 Requirement Prioritization (MoSCoW Method)</h3>
+<p>* <b>Must Have:</b> FR-01, FR-02, FR-04, FR-05, FR-06, FR-07, FR-08, FR-10, FR-12, FR-13 (Core emergency discovery, donor matching, bed controls, and SOS dispatch).</p>
+<p>* <b>Should Have:</b> FR-09, FR-11, FR-14, FR-15 (Oxygen/Ventilator badges, 24/7 store filters, direct phone dials, donor verification queue).</p>
+<p>* <b>Could Have:</b> FR-03 (1-click instant demo accounts for examination presentations).</p>
+<p>* <b>Won't Have (This Release):</b> Automated drone delivery dispatch, multi-lingual audio translation, and hospital EHR/EMR full billing synchronization (reserved for Future Scope).</p>
+<h3>2.5 Constraints and Assumptions</h3>
+<p>* <b>Constraints:</b></p>
+<p>1. The prototype operates as a single-page web app with client-side reactive storage backed optionally by Firebase Spark free tier.</p>
+<p>2. Public API access keys for Google services are restricted to public client IDs; administrative database modifications require role verification.</p>
+<p>3. The project timeline is structured across a 15-week academic development cycle.</p>
+<p>* <b>Assumptions:</b></p>
+<p>1. Users possess a standard smartphone or computer with modern web browser capabilities and mobile data or Wi-Fi connectivity.</p>
+<p>2. Hospitals and pharmacies designate staff to maintain bed counts and stock statuses accurately.</p>
+<p>3. GPS location permission is granted by the browser for automated landmark detection.</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>3. Software Development Life Cycle (SDLC) Planning</h1>
+<h3>3.1 Selection of SDLC Model</h3>
+<p>The <b>Incremental / Agile-Style Iterative Model</b> was chosen for LifeLink. Healthcare emergency software requires continuous user interface refinement, testing with real clinical scenarios, and feedback from medical coordination stakeholders.</p>
+<p><b>Table 9: Development increments</b></p>
+<table><thead><tr>
+<th>Increment</th>
+<th>Deliverable</th>
+<th>Outcome</th>
+</tr></thead><tbody>
+<tr>
+<td><b>1</b></td>
+<td>Architecture setup: Vite, Tailwind CSS, routing engine, and initial mock health data (`mockData.js`).</td>
+<td>Navigable application shell and core styling.</td>
+</tr>
+<tr>
+<td><b>2</b></td>
+<td>Public Discovery Modules: Blood Finder, Hospital Bed Tracker, Pharmacy Medicine Stock, and Emergency Hotlines.</td>
+<td>Visitors can search donors, beds, and medicines.</td>
+</tr>
+<tr>
+<td><b>3</b></td>
+<td>Authentication & Dual-Mode Storage: Role-Based Access Control, session management, and `storage.js` reactive layer.</td>
+<td>Secure multi-stakeholder logins and data persistence.</td>
+</tr>
+<tr>
+<td><b>4</b></td>
+<td>5 Stakeholder Dashboards: Recipient, Donor, Hospital Triage Desk, Pharmacy Controller, and Governance Admin.</td>
+<td>Functional administrative controls for all 5 roles.</td>
+</tr>
+<tr>
+<td><b>5</b></td>
+<td>Leaflet GIS interactive map integration, testing suite, Netlify cloud deployment, and Black Book documentation.</td>
+<td>Fully verified, deployed, and documented release candidate.</td>
+</tr>
+</tbody></table>
+<p><i>Why not Waterfall?</i> Emergency software features (such as one-click SOS and live (+) / (-) bed controls) benefit from iterative hands-on validation. A rigid waterfall approach would postpone user testing until the end of the project.</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>3.2 Work Breakdown Structure (WBS)</h3>
+<div class='figure-box'><img src='images/fig01_wbs.svg' alt='WBS'><div class='figure-caption'>Figure 1: Work Breakdown Structure of the LifeLink Project</div></div>
+<pre><code>
+LifeLink Project
+│
+├── 1. Planning &amp; Analysis
+│   ├── Problem Definition &amp; Case Studies
+│   ├── Feasibility Analysis (Technical &amp; Economic)
+│   └── Requirement Engineering (MoSCoW Prioritization)
+│
+├── 2. System Design &amp; Modeling
+│   ├── UML Diagrams (Use Case, Class, Sequence, Activity)
+│   ├── Data Flow Diagrams (DFD Level 0, 1, 2)
+│   └── Relational Schema &amp; ER Modeling
+│
+├── 3. Frontend Development
+│   ├── Reusable Components (Navbar, Footer, Layouts, Drawer)
+│   ├── Public Finders (Blood, Hospitals, Medicines, SOS)
+│   └── Leaflet GIS Mapping &amp; GPS Geocoding Engine
+│
+├── 4. Stakeholder Dashboards &amp; RBAC
+│   ├── Patient / Recipient Portal
+│   ├── Voluntary Donor Dashboard (Available / Resting Switch)
+│   ├── Hospital Bed &amp; ICU Triage Control Station
+│   ├── Pharmacy Medicine Stock Manager
+│   └── Governance Administration &amp; Verification Desk
+│
+├── 5. Testing &amp; Verification
+│   ├── Unit Testing of State &amp; Calculation Methods
+│   ├── Black-Box Boundary Testing (BB-01 to BB-40)
+│   └── Cross-Browser Mobile Responsive Audits
+│
+└── 6. Deployment &amp; Documentation
+    ├── Netlify Edge Cloud Deployment
+    ├── GitHub Version Control &amp; Repository Release
+    └── Final Academic Black Book Project Report
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>3.3 Gantt Chart (Development Schedule)</h3>
+<div class='figure-box'><img src='images/fig02_gantt.svg' alt='Gantt'><div class='figure-caption'>Figure 2: Gantt Chart (Development Schedule - 15 Weeks)</div></div>
+<p>The project spanned 15 weeks from June 2026 to October 2026:</p>
+<table><thead><tr>
+<th>Activity / Phase</th>
+<th>W1-2</th>
+<th>W3-4</th>
+<th>W5-6</th>
+<th>W7-8</th>
+<th>W9-10</th>
+<th>W11-12</th>
+<th>W13-14</th>
+<th>W15</th>
+</tr></thead><tbody>
+<tr>
+<td>Problem Identification & Literature Survey</td>
+<td>████</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Requirement Engineering & Feasibility</td>
+<td></td>
+<td>████</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UML Modeling & Architectural Design</td>
+<td></td>
+<td></td>
+<td>████</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Frontend UI & Discovery Modules Development</td>
+<td></td>
+<td></td>
+<td></td>
+<td>████</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dashboards, Storage & Firebase Integration</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>████</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Leaflet GIS & Geolocation Telemetry</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>████</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Testing, Bug Tracking & Refactoring</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>████</td>
+<td></td>
+</tr>
+<tr>
+<td>Cloud Deployment & Black Book Documentation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>████</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>3.4 Resource Planning & Risk Management</h3>
+<p><b>Table 10: Resource plan</b></p>
+<table><thead><tr>
+<th>Resource type</th>
+<th>Details</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Human Resource</b></td>
+<td>Singh Anurag Saroj (Lead Developer); Mrs. Jyoti Jadhav (Project Guide for review).</td>
+</tr>
+<tr>
+<td><b>Hardware</b></td>
+<td>Laptop PC (8 GB RAM, 256 GB SSD); Android/iOS smartphones for mobile viewport testing.</td>
+</tr>
+<tr>
+<td><b>Software Tools</b></td>
+<td>Visual Studio Code, Git, Chrome DevTools, PowerShell.</td>
+</tr>
+<tr>
+<td><b>Libraries & APIs</b></td>
+<td>React 18, Vite 5, Tailwind CSS 3, Lucide React, Leaflet 1.9, OpenStreetMap Nominatim.</td>
+</tr>
+<tr>
+<td><b>Cloud Hosting</b></td>
+<td>Netlify Edge (Production deployment); GitHub (Repository version control).</td>
+</tr>
+</tbody></table>
+<p><b>Table 11: Risk register</b></p>
+<table><thead><tr>
+<th>Risk Identified</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation Strategy</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Firestore Database unprovisioned or network offline</b></td>
+<td>Medium</td>
+<td>High</td>
+<td>Application implements a dual-mode reactive local storage layer that runs seamlessly offline.</td>
+</tr>
+<tr>
+<td><b>Browser GPS location denied by user</b></td>
+<td>Medium</td>
+<td>Medium</td>
+<td>System detects rejection and gracefully defaults to metropolitan center coordinates (`Metro Central`).</td>
+</tr>
+<tr>
+<td><b>Tampering with hospital bed counts by unauthorized users</b></td>
+<td>Low</td>
+<td>High</td>
+<td>Role-Based Access Control redirects non-hospital users away from `/hospital/dashboard`.</td>
+</tr>
+<tr>
+<td><b>Mobile viewport layout overflow on small screens</b></td>
+<td>Medium</td>
+<td>Low</td>
+<td>Tailwind CSS flex-wrap and responsive utility breakpoints (`sm:`, `md:`, `lg:`) eliminate horizontal overflow.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>4. System Modeling Using UML</h1>
+<h3>4.1 Use Case Diagram</h3>
+<div class='figure-box'><img src='images/fig03_usecase.svg' alt='Use Case'><div class='figure-caption'>Figure 3: Use Case Diagram of LifeLink Healthcare System</div></div>
+<pre><code>
+flowchart LR
+    subgraph Actors
+        P[&quot;Patient / Public User&quot;]
+        D[&quot;Voluntary Donor&quot;]
+        H[&quot;Hospital Bed Manager&quot;]
+        Ph[&quot;Pharmacist&quot;]
+        A[&quot;Governance Admin&quot;]
+    end
+
+    subgraph LifeLinkSystem[&quot;LifeLink Core System&quot;]
+        UC1[&quot;Filter Blood Donors by Group&quot;]
+        UC2[&quot;Broadcast Emergency Blood Request&quot;]
+        UC3[&quot;Check ICU / Emergency Bed Vacancies&quot;]
+        UC4[&quot;Query 24/7 Pharmacy Stock&quot;]
+        UC5[&quot;Trigger 1-Tap Emergency SOS Alert&quot;]
+        UC6[&quot;Toggle Donor Status (Available / Resting)&quot;]
+        UC7[&quot;Accept &amp; Fulfill Blood Request&quot;]
+        UC8[&quot;Update Live Bed Inventory (+ / -)&quot;]
+        UC9[&quot;Adjust Medicine Stock Quantities&quot;]
+        UC10[&quot;Verify Donors with Trust Badge&quot;]
+        UC11[&quot;Sync / Backup Cloud Database&quot;]
+    end
+
+    P --&gt; UC1
+    P --&gt; UC2
+    P --&gt; UC3
+    P --&gt; UC4
+    P --&gt; UC5
+
+    D --&gt; UC6
+    D --&gt; UC7
+
+    H --&gt; UC8
+    H --&gt; UC3
+
+    Ph --&gt; UC9
+    Ph --&gt; UC4
+
+    A --&gt; UC10
+    A --&gt; UC11
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>4.2 Class Diagram</h3>
+<div class='figure-box'><img src='images/fig04_class.svg' alt='Class Diagram'><div class='figure-caption'>Figure 4: Class Diagram of LifeLink Domain Entities</div></div>
+<pre><code>
+classDiagram
+    class User {
+        +string id
+        +string name
+        +string email
+        +string role
+        +string phone
+        +Object location
+        +login()
+        +register()
+        +logout()
+    }
+
+    class Donor {
+        +string id
+        +string userId
+        +string bloodGroup
+        +string availability
+        +boolean isVerified
+        +int totalDonations
+        +toggleAvailability()
+        +acceptRequest()
+    }
+
+    class Hospital {
+        +string id
+        +string providerUserId
+        +string name
+        +string address
+        +string emergencyHotline
+        +boolean hasOxygen
+        +boolean hasVentilators
+        +Object beds
+        +updateBedCounts()
+    }
+
+    class Medicine {
+        +string id
+        +string pharmacyId
+        +string name
+        +string genericName
+        +string strength
+        +float price
+        +int quantity
+        +string status
+        +adjustStock()
+    }
+
+    class BloodRequest {
+        +string id
+        +string requesterId
+        +string patientName
+        +string bloodGroup
+        +int unitsNeeded
+        +string hospitalName
+        +string urgency
+        +string status
+        +dispatch()
+    }
+
+    class EmergencyAlert {
+        +string id
+        +string requesterId
+        +string type
+        +string urgency
+        +Object location
+        +string status
+        +triggerSOS()
+    }
+
+    User &lt;|-- Donor
+    User &quot;1&quot; --&gt; &quot;*&quot; BloodRequest : creates
+    User &quot;1&quot; --&gt; &quot;*&quot; EmergencyAlert : triggers
+    Hospital &quot;1&quot; --&gt; &quot;*&quot; BloodRequest : receives
+    Donor &quot;1&quot; --&gt; &quot;*&quot; BloodRequest : fulfills
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>4.3 Sequence Diagram (Emergency Blood Request & Dispatch)</h3>
+<pre><code>
+sequenceDiagram
+    autonumber
+    actor Patient as Patient / Attendant
+    participant UI as BloodFinder UI
+    participant DataCtx as DataContext
+    participant Storage as StorageService
+    participant Donor as Voluntary Donor
+
+    Patient -&gt;&gt; UI: Selects Blood Group (e.g. O-) &amp; clicks &quot;Broadcast Request&quot;
+    Patient -&gt;&gt; UI: Enters Patient Name, Units, Hospital, &amp; Urgency (Critical)
+    UI -&gt;&gt; DataCtx: requestBlood(requestPayload)
+    DataCtx -&gt;&gt; Storage: create(BLOOD_REQUESTS, payload)
+    Storage --&gt;&gt; DataCtx: Returns new request (id: req_b_01)
+    DataCtx -&gt;&gt; Storage: create(NOTIFICATIONS, alertPayload)
+    Storage --&gt;&gt; UI: Event &#39;lifelink:storage_updated&#39; fired
+    UI --&gt;&gt; Patient: Displays green success toast (&quot;Request Dispatched&quot;)
+    Storage --&gt;&gt; Donor: Notification arrives in Donor Dashboard
+    Donor -&gt;&gt; Donor: Clicks &quot;Accept &amp; Dispatch&quot;
+    Donor -&gt;&gt; DataCtx: updateBloodRequestStatus(req_b_01, &quot;ACCEPTED&quot;)
+    DataCtx --&gt;&gt; Patient: Status updates to &quot;Donor Matched &amp; En Route&quot;
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>4.4 Activity Diagram (Emergency SOS Triage Workflow)</h3>
+<pre><code>
+flowchart TD
+    Start([User opens Emergency Page / Launches SOS]) --&gt; GPS{Is GPS Permitted?}
+    GPS -- Yes --&gt; AutoLoc[Capture Latitude &amp; Longitude via HTML5 Geolocation]
+    GPS -- No --&gt; ManualLoc[Prompt Landmark / Street Address Input]
+
+    AutoLoc --&gt; ReverseGeo[Reverse-geocode coordinates via Nominatim API]
+    ManualLoc --&gt; Form[Select Emergency Type: ICU Bed, Blood, Ventilator, Ambulance]
+    ReverseGeo --&gt; Form
+
+    Form --&gt; Submit[Click &#39;Transmit Priority Emergency SOS&#39;]
+    Submit --&gt; Validate{Are Contact &amp; Patient details valid?}
+
+    Validate -- No --&gt; Error[Display highlighted validation error message]
+    Error --&gt; Form
+
+    Validate -- Yes --&gt; Dispatch[Dispatch Emergency Alert to Regional Triage Queue]
+    Dispatch --&gt; NotifyHosp[Alert nearby participating trauma facilities]
+    Dispatch --&gt; HotlineStrip[Display 1-Click Dial links: 108 Ambulance / 112 Unified]
+    HotlineStrip --&gt; Success([SOS Broadcast Active &amp; Paramedics Dispatched])
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>4.5 Entity Relationship (ER) Diagram</h3>
+<pre><code>
+erDiagram
+    USERS ||--o{ BLOOD_REQUESTS : initiates
+    USERS ||--o{ EMERGENCY_REQUESTS : triggers
+    USERS ||--o| DONORS : registers
+    USERS ||--o| HOSPITALS : operates
+    USERS ||--o| PHARMACIES : manages
+    HOSPITALS ||--o{ BLOOD_REQUESTS : receives_at
+    DONORS ||--o{ BLOOD_REQUESTS : donates_to
+    PHARMACIES ||--o{ MEDICINES : maintains
+
+    USERS {
+        string id PK
+        string name
+        string email
+        string role
+        string phone
+        string address
+        string city
+        datetime createdAt
+    }
+
+    DONORS {
+        string id PK
+        string userId FK
+        string bloodGroup
+        string availability
+        boolean isVerified
+        int totalDonations
+        string phone
+        string bio
+    }
+
+    HOSPITALS {
+        string id PK
+        string providerUserId FK
+        string name
+        string address
+        string phone
+        string emergencyHotline
+        boolean hasOxygen
+        boolean hasVentilators
+        json beds
+    }
+
+    MEDICINES {
+        string id PK
+        string pharmacyId FK
+        string name
+        string genericName
+        string strength
+        string category
+        float price
+        int quantity
+        boolean isRxRequired
+        string status
+    }
+
+    BLOOD_REQUESTS {
+        string id PK
+        string requesterId FK
+        string patientName
+        string bloodGroup
+        int unitsNeeded
+        string hospitalName
+        string urgency
+        string status
+        string assignedDonorId FK
+    }
+
+    EMERGENCY_REQUESTS {
+        string id PK
+        string requesterId FK
+        string type
+        string urgency
+        json location
+        string contactName
+        string contactPhone
+        string details
+        string status
+    }
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>4.6 Deployment Diagram</h3>
+<div class='figure-box'><img src='images/fig10_deployment.svg' alt='Deployment'><div class='figure-caption'>Figure 10: Deployment Architecture Diagram of LifeLink</div></div>
+<pre><code>
+flowchart TD
+    subgraph ClientSide[&quot;Client Tier (User Smartphone / PC)&quot;]
+        Browser[&quot;Modern Browser (Chrome / Edge / Firefox / Safari)&quot;]
+        LocalStorage[&quot;Client Storage: Session, User Location, Reactive Tables&quot;]
+        LeafletLib[&quot;Leaflet Map Engine &amp; Canvas Renderer&quot;]
+    end
+
+    subgraph HostingTier[&quot;Static Hosting Tier (Netlify Edge CDN)&quot;]
+        HTTPS[&quot;HTTPS Security Layer (TLS 1.3)&quot;]
+        StaticAssets[&quot;Vite Bundled Assets: HTML Shell, JS Bundles, Tailwind CSS, SVG Favicon&quot;]
+    end
+
+    subgraph ExternalAPIs[&quot;Public Geospatial Services&quot;]
+        Nominatim[&quot;OpenStreetMap Nominatim Reverse Geocoding API&quot;]
+        OSMTiles[&quot;OpenStreetMap Map Tile Server&quot;]
+    end
+
+    subgraph CloudDatabase[&quot;Backend-as-a-Service (Google Cloud Firebase)&quot;]
+        FirebaseAuth[&quot;Firebase Authentication (Identity Toolkit)&quot;]
+        Firestore[&quot;Cloud Firestore (NoSQL Document Collections)&quot;]
+    end
+
+    Browser &lt;--&gt; HTTPS
+    HTTPS --&gt; StaticAssets
+    Browser &lt;--&gt; LocalStorage
+    Browser --&gt; LeafletLib
+    LeafletLib &lt;--&gt; OSMTiles
+    Browser &lt;--&gt; Nominatim
+    Browser &lt;--&gt; FirebaseAuth
+    Browser &lt;--&gt; Firestore
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>4.7 Data Flow Diagrams (DFD)</h3>
+<div class='figure-box'><img src='images/fig11_dfd0.svg' alt='DFD 0'><div class='figure-caption'>Figure 11: Data Flow Diagram (DFD Level 0 - Context Level)</div></div>
+<h4>DFD Level 0 (Context Diagram)</h4>
+<pre><code>
+flowchart LR
+    Patient[&quot;Patient / Public User&quot;]
+    Donor[&quot;Voluntary Donor&quot;]
+    Hospital[&quot;Hospital Triage Desk&quot;]
+    Pharmacy[&quot;Pharmacy Chemist&quot;]
+    Admin[&quot;Governance Admin&quot;]
+
+    System[&quot;0.0 LifeLink Healthcare Availability Platform&quot;]
+
+    Patient -- &quot;Blood Request / Emergency SOS&quot; --&gt; System
+    System -- &quot;Matching Donors &amp; Vacant Beds&quot; --&gt; Patient
+
+    Donor -- &quot;Availability Status &amp; Accept Response&quot; --&gt; System
+    System -- &quot;Emergency Blood Alerts&quot; --&gt; Donor
+
+    Hospital -- &quot;Bed Vacancy Counts &amp; Facility Status&quot; --&gt; System
+    System -- &quot;Emergency Triage Queue&quot; --&gt; Hospital
+
+    Pharmacy -- &quot;Medicine Stock &amp; Pricing&quot; --&gt; System
+    System -- &quot;Medicine Queries&quot; --&gt; Pharmacy
+
+    Admin -- &quot;Donor Verification &amp; Cloud Sync&quot; --&gt; System
+    System -- &quot;System Telemetry &amp; Audit Logs&quot; --&gt; Admin
+</code></pre>
+<h4>DFD Level 1 (Major System Sub-Processes)</h4>
+<pre><code>
+flowchart TD
+    User[&quot;User Interaction&quot;]
+
+    P1[&quot;1.0 User Authentication &amp; RBAC Router&quot;]
+    P2[&quot;2.0 Blood Donor Matching Engine&quot;]
+    P3[&quot;3.0 Hospital Bed Inventory Management&quot;]
+    P4[&quot;4.0 Pharmacy Medicine Stock Engine&quot;]
+    P5[&quot;5.0 Emergency SOS Triage Dispatch&quot;]
+    P6[&quot;6.0 System Governance &amp; Cloud Sync&quot;]
+
+    D1[(&quot;D1: Users &amp; Profiles&quot;)]
+    D2[(&quot;D2: Donors Registry&quot;)]
+    D3[(&quot;D3: Hospital Bed Records&quot;)]
+    D4[(&quot;D4: Pharmacy Medicine Stocks&quot;)]
+    D5[(&quot;D5: Blood &amp; SOS Requests&quot;)]
+    D6[(&quot;D6: System Notifications&quot;)]
+
+    User --&gt; P1
+    P1 &lt;--&gt; D1
+
+    User --&gt; P2
+    P2 &lt;--&gt; D2
+    P2 --&gt; D5
+    P2 --&gt; D6
+
+    User --&gt; P3
+    P3 &lt;--&gt; D3
+
+    User --&gt; P4
+    P4 &lt;--&gt; D4
+
+    User --&gt; P5
+    P5 --&gt; D5
+    P5 --&gt; D6
+
+    User --&gt; P6
+    P6 &lt;--&gt; D1
+    P6 &lt;--&gt; D2
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>5. System Architecture Design</h1>
+<h3>5.1 Frontend Architecture</h3>
+<p>LifeLink is architected as an optimized, responsive Single Page Application (SPA). By leveraging React Router DOM v6 with nested layout outlets, the browser downloads the primary application shell once and performs instantaneous client-side view swaps.</p>
+<p><b>Table 12: Frontend components</b></p>
+<table><thead><tr>
+<th>Component / File</th>
+<th>Purpose & Route Mapping</th>
+</tr></thead><tbody>
+<tr>
+<td><b>`Navbar.jsx`</b></td>
+<td>Global header: logo branding, navigation links, GPS location badge with live pulse indicator, notification drawer trigger, and Emergency SOS button.</td>
+</tr>
+<tr>
+<td><b>`Footer.jsx`</b></td>
+<td>Global footer: 24/7 toll-free national emergency hotline quick-dial strip (108, 102, 1075, 112), role portals, and verified platform disclaimer.</td>
+</tr>
+<tr>
+<td><b>`PublicLayout.jsx`</b></td>
+<td>Root layout for unauthenticated and public discovery routes.</td>
+</tr>
+<tr>
+<td><b>`DashboardLayout.jsx`</b></td>
+<td>Authenticated shell with role badge, sidebar, back-to-site link, and logout button.</td>
+</tr>
+<tr>
+<td><b>`ProtectedRoute.jsx`</b></td>
+<td>Security guard: checks authentication state and restricts route access to `allowedRoles`.</td>
+</tr>
+<tr>
+<td><b>`MapView.jsx`</b></td>
+<td>Encapsulated Leaflet map container: handles dynamic pin rendering, automatic boundary adjustment, and customized HTML popups.</td>
+</tr>
+<tr>
+<td><b>`NotificationsDrawer.jsx`</b></td>
+<td>Slide-over drawer rendering recent emergency notifications, unread badges, and clear-all actions.</td>
+</tr>
+<tr>
+<td><b>`Home.jsx` (`/`)</b></td>
+<td>Hero banner, real-time aggregate metric counters, emergency triage callout, and 3 pillar cards.</td>
+</tr>
+<tr>
+<td><b>`BloodFinder.jsx` (`/blood-finder`)</b></td>
+<td>Blood group filtering strip (`A+` to `O-`), donor proximity cards, map toggle, and broadcast request modal.</td>
+</tr>
+<tr>
+<td><b>`HospitalFinder.jsx` (`/hospital-finder`)</b></td>
+<td>ICU, Trauma, General, and Pediatric bed vacancy tracker with Oxygen and Ventilator filters.</td>
+</tr>
+<tr>
+<td><b>`MedicineFinder.jsx` (`/medicine-finder`)</b></td>
+<td>Therapeutic category filter, ₹ pricing display, prescription badges, and 24-hour pharmacy filter.</td>
+</tr>
+<tr>
+<td><b>`Emergency.jsx` (`/emergency`)</b></td>
+<td>Priority SOS transmission station with category selector, landmark geocoder, and hotline cards.</td>
+</tr>
+<tr>
+<td><b>`Login.jsx` & `Register.jsx`</b></td>
+<td>Multi-role registration and login forms with 1-click instant evaluation demo presets.</td>
+</tr>
+<tr>
+<td><b>5 Stakeholder Dashboards</b></td>
+<td>Specialized portals for Patients, Donors, Hospital Admins, Pharmacists, and Governance Admins.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>5.2 Backend Architecture & Operations</h3>
+<p>The platform utilizes a dual-tier architecture:</p>
+<p>1. <b>Cloud Tier (Google Cloud Firestore):</b> High-availability NoSQL document store with modular Web SDK integration (`projectId: lifelink1-bcd99`).</p>
+<p>2. <b>Local Tier (`storage.js`):</b> Client-side reactive persistence ensuring zero stoppage during development, prototype demonstration, or intermittent connectivity.</p>
+<p><b>Table 13: Storage operations used by the application</b></p>
+<table><thead><tr>
+<th>Operation</th>
+<th>Invoked By</th>
+<th>Purpose</th>
+</tr></thead><tbody>
+<tr>
+<td>`storage.getAll(table)`</td>
+<td>Public finders & dashboards</td>
+<td>Reads collection records from local reactive storage.</td>
+</tr>
+<tr>
+<td>`storage.create(table, item)`</td>
+<td>Requests, Users, Donors</td>
+<td>Inserts new record, dispatches `storage_updated` event, and syncs to Firestore.</td>
+</tr>
+<tr>
+<td>`storage.update(table, id, updates)`</td>
+<td>Bed controls, stock adjustments</td>
+<td>Modifies existing record and synchronizes changes across tabs and cloud.</td>
+</tr>
+<tr>
+<td>`storage.remove(table, id)`</td>
+<td>Admin user/donor deletion</td>
+<td>Removes record and propagates deletion.</td>
+</tr>
+<tr>
+<td>`storage.syncFromFirestore()`</td>
+<td>Governance Admin</td>
+<td>Queries Firestore collections and synchronizes latest cloud state into local storage.</td>
+</tr>
+<tr>
+<td>`storage.exportData()`</td>
+<td>Governance Admin</td>
+<td>Serializes entire system state into a downloadable JSON backup.</td>
+</tr>
+<tr>
+<td>`storage.resetDefaults()`</td>
+<td>Governance Admin</td>
+<td>Re-seeds initial hospital, donor, and medicine datasets.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>5.3 Database Schema Design</h3>
+<p><b>Table 16: Table `lifelink_users`</b></p>
+<table><thead><tr>
+<th>Column</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>`id`</td>
+<td>string</td>
+<td>Primary Key</td>
+<td>Unique user identifier (`user_xxx`).</td>
+</tr>
+<tr>
+<td>`name`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Full name of patient, donor, or organization.</td>
+</tr>
+<tr>
+<td>`email`</td>
+<td>string</td>
+<td>NOT NULL, Unique</td>
+<td>Account email address.</td>
+</tr>
+<tr>
+<td>`role`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>One of: `USER`, `DONOR`, `HOSPITAL`, `PHARMACY`, `ADMIN`.</td>
+</tr>
+<tr>
+<td>`phone`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Contact telephone number.</td>
+</tr>
+<tr>
+<td>`location`</td>
+<td>json</td>
+<td>NOT NULL</td>
+<td>Nested object containing `{lat, lng, address, city}`.</td>
+</tr>
+<tr>
+<td>`createdAt`</td>
+<td>timestamp</td>
+<td>default now()</td>
+<td>Registration timestamp.</td>
+</tr>
+</tbody></table>
+<p><b>Table 17: Table `lifelink_donors`</b></p>
+<table><thead><tr>
+<th>Column</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>`id`</td>
+<td>string</td>
+<td>Primary Key</td>
+<td>Unique donor identifier (`donor_xxx`).</td>
+</tr>
+<tr>
+<td>`userId`</td>
+<td>string</td>
+<td>Foreign Key $\rightarrow$ `users.id`</td>
+<td>Associated user account reference.</td>
+</tr>
+<tr>
+<td>`name`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Donor full name.</td>
+</tr>
+<tr>
+<td>`bloodGroup`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>One of: `A+`, `A-`, `B+`, `B-`, `AB+`, `AB-`, `O+`, `O-`.</td>
+</tr>
+<tr>
+<td>`availability`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>`AVAILABLE` or `RECENTLY_DONATED`.</td>
+</tr>
+<tr>
+<td>`isVerified`</td>
+<td>boolean</td>
+<td>default false</td>
+<td>Administrative verification badge status.</td>
+</tr>
+<tr>
+<td>`totalDonations`</td>
+<td>int</td>
+<td>default 0</td>
+<td>Number of verified whole blood donations.</td>
+</tr>
+<tr>
+<td>`bio`</td>
+<td>string</td>
+<td>Optional</td>
+<td>Short donor description and notice window.</td>
+</tr>
+</tbody></table>
+<p><b>Table 18: Table `lifelink_hospitals`</b></p>
+<table><thead><tr>
+<th>Column</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>`id`</td>
+<td>string</td>
+<td>Primary Key</td>
+<td>Unique hospital identifier (`hosp_xxx`).</td>
+</tr>
+<tr>
+<td>`name`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Hospital or medical centre title.</td>
+</tr>
+<tr>
+<td>`address`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Street address and city zone.</td>
+</tr>
+<tr>
+<td>`phone`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Reception telephone number.</td>
+</tr>
+<tr>
+<td>`emergencyHotline`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Dedicated acute care emergency hotline number.</td>
+</tr>
+<tr>
+<td>`beds`</td>
+<td>json</td>
+<td>NOT NULL</td>
+<td>Nested counts: `{general, icu, emergency, pediatric}`.</td>
+</tr>
+<tr>
+<td>`hasOxygen`</td>
+<td>boolean</td>
+<td>default true</td>
+<td>Continuous centralized medical oxygen availability.</td>
+</tr>
+<tr>
+<td>`hasVentilators`</td>
+<td>boolean</td>
+<td>default true</td>
+<td>Mechanical ventilator readiness flag.</td>
+</tr>
+</tbody></table>
+<p><b>Table 19: Table `lifelink_medicines`</b></p>
+<table><thead><tr>
+<th>Column</th>
+<th>Type</th>
+<th>Constraint</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>`id`</td>
+<td>string</td>
+<td>Primary Key</td>
+<td>Unique medicine identifier (`med_xxx`).</td>
+</tr>
+<tr>
+<td>`pharmacyId`</td>
+<td>string</td>
+<td>Foreign Key $\rightarrow$ `pharmacies.id`</td>
+<td>Stocking pharmacy identifier.</td>
+</tr>
+<tr>
+<td>`name`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Commercial brand title (e.g. Dolo 650, Augmentin).</td>
+</tr>
+<tr>
+<td>`genericName`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Active chemical formulation (e.g. Paracetamol).</td>
+</tr>
+<tr>
+<td>`strength`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>Unit strength (e.g. 650mg, 100mcg, 100 IU/ml).</td>
+</tr>
+<tr>
+<td>`price`</td>
+<td>float</td>
+<td>NOT NULL</td>
+<td>Maximum Retail Price in Indian Rupees (₹).</td>
+</tr>
+<tr>
+<td>`quantity`</td>
+<td>int</td>
+<td>NOT NULL</td>
+<td>Live units available in store inventory.</td>
+</tr>
+<tr>
+<td>`status`</td>
+<td>string</td>
+<td>NOT NULL</td>
+<td>`AVAILABLE`, `LOW_STOCK`, or `UNAVAILABLE`.</td>
+</tr>
+<tr>
+<td>`isRxRequired`</td>
+<td>boolean</td>
+<td>default false</td>
+<td>Prescription requirement indicator.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>5.4 Security Considerations</h3>
+<p><b>Table 20: Security considerations</b></p>
+<table><thead><tr>
+<th>Potential Threat</th>
+<th>Countermeasure in LifeLink</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Privilege Escalation</b></td>
+<td>`ProtectedRoute.jsx` intercepts route changes and verifies `user.role` before rendering administrative dashboards.</td>
+</tr>
+<tr>
+<td><b>Cross-Site Scripting (XSS)</b></td>
+<td>React JSX automatically escapes dangerous HTML entities before DOM injection; no direct `dangerouslySetInnerHTML` is used.</td>
+</tr>
+<tr>
+<td><b>API Key Exposure</b></td>
+<td>Sensitive cloud service keys are excluded from git repositories; repository uses `.gitignore` and sanitized HTTPS URLs.</td>
+</tr>
+<tr>
+<td><b>Credential Tampering</b></td>
+<td>Passwords checked with minimum length requirements; authentication handled by modular identity tokens.</td>
+</tr>
+<tr>
+<td><b>Bed Count Vandalism</b></td>
+<td>Only authenticated hospital staff have access to the bed inventory adjustment controls.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>6. Application Development</h1>
+<h3>6.1 Frontend Implementation & UI Screens</h3>
+<div class='figure-box'><img src='images/fig15_home.png' alt='Home Page'><div class='figure-caption'>Figure 15: LifeLink Landing Page & Real-Time Availability Radar</div></div>
+<div class='figure-box'><img src='images/fig16_emergency.png' alt='Emergency SOS'><div class='figure-caption'>Figure 16: Real-Time Emergency SOS Triage & Hospital Geolocation Modal</div></div>
+<div class='figure-box'><img src='images/fig17_hospitals.png' alt='Hospitals'><div class='figure-caption'>Figure 17: Hospital Directory & Real-Time ICU/Oxygen Bed Availability</div></div>
+<div class='figure-box'><img src='images/fig19_blood_finder.png' alt='Blood Donors'><div class='figure-caption'>Figure 18: Blood Donor Search & Compatibility Matching Directory</div></div>
+<div class='figure-box'><img src='images/fig20_medicine_finder.png' alt='Medicines'><div class='figure-caption'>Figure 19: Critical Medicine Availability Search & 2-Hour Stock Reservation</div></div>
+<div class='figure-box'><img src='images/fig21_login.png' alt='Login'><div class='figure-caption'>Figure 20: Role-Based Authentication & Instant Demo Credential Access</div></div>
+<div class='figure-box'><img src='images/fig22_register.png' alt='Register'><div class='figure-caption'>Figure 21: Stakeholder Registration Portal (Patient, Donor, Hospital, Pharmacy)</div></div>
+<div class='figure-box'><img src='images/fig26_mobile_view.png' alt='Mobile View'><div class='figure-caption'>Figure 22: Responsive Mobile Layout View (390 x 844 Viewport)</div></div>
+<p>The interface is developed in modular React JSX with Tailwind CSS classes. Key screens include:</p>
+<p>1. <b>Login & Registration Screen:</b> Centered card featuring the LifeLink gradient emblem, role selector pills, email/password inputs, and a dedicated <b>1-Click Instant Demo Portals</b> panel for evaluation.</p>
+<p>2. <b>Home Screen (`/`):</b> Displays four live metric counters (Active Donors, Hospitals, Available Beds, Medicines), an emergency alert ribbon with direct 108 ambulance dialer, and 3 interactive discovery feature cards.</p>
+<p>3. <b>Blood Finder Screen (`/blood-finder`):</b> Blood group selector pills (`A+` to `O-`), donor cards with distance and verification badges, a Leaflet GIS interactive map toggle, and a modal for emergency blood broadcasting.</p>
+<p>4. <b>Hospital Bed Availability Screen (`/hospital-finder`):</b> Live vacancy counters across 4 bed tiers (ICU, Emergency, General, Pediatric), filter chips for Oxygen and Ventilator readiness, and direct acute care hotline buttons.</p>
+<p>5. <b>Medicine Stock Screen (`/medicine-finder`):</b> Real-time stock listing with ₹ pricing, dosage forms, manufacturer details, prescription badges, and a 24-hour pharmacy filter.</p>
+<p>6. <b>Emergency SOS Screen (`/emergency`):</b> Priority emergency dispatch form with HTML5 GPS coordinate capture, triage category selector, and direct cards for national helplines (<b>108, 102, 1075, 112</b>).</p>
+<p>7. <b>Hospital Bed Control Station (`/hospital/dashboard`):</b> Real-time interactive control panel allowing on-duty nursing triage staff to increment and decrement available ICU, trauma, and general beds using single-click <b>(+)</b> and <b>(-)</b> buttons.</p>
+<p>8. <b>Voluntary Donor Portal (`/donor/dashboard`):</b> Features an <b>Available vs. Resting</b> toggle switch and a real-time queue of patient requests matching the donor's blood phenotype.</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>6.2 Error Handling & Graceful Degradation</h3>
+<p><b>Table 23: Error handling</b></p>
+<table><thead><tr>
+<th>Situation</th>
+<th>Where Handled</th>
+<th>Result for the User</th>
+</tr></thead><tbody>
+<tr>
+<td>Cloud Firestore unprovisioned / offline</td>
+<td>`firebase.js` / `storage.js`</td>
+<td>App logs notice and continues running in <b>Zero-Config Reactive Local State Mode</b>.</td>
+</tr>
+<tr>
+<td>Invalid email or password under 6 chars</td>
+<td>`Login.jsx` / `Register.jsx`</td>
+<td>Red validation message rendered beneath inputs; submission blocked.</td>
+</tr>
+<tr>
+<td>Browser GPS permission denied</td>
+<td>`LocationContext.jsx`</td>
+<td>Gracefully falls back to default city center coordinates (`Metro Central`).</td>
+</tr>
+<tr>
+<td>Non-existent route requested</td>
+<td>`App.jsx` (`path="*"`)</td>
+<td>Renders friendly `NotFound.jsx` (404) page with "Return to Safety" button.</td>
+</tr>
+<tr>
+<td>Unauthorized user opens Admin portal</td>
+<td>`ProtectedRoute.jsx`</td>
+<td>Intercepted and routed to `Unauthorized.jsx` (403) security error page.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>7. Integration & System Testing</h1>
+<h3>7.1 Unit Testing</h3>
+<p><b>Table 24: Unit test results</b></p>
+<table><thead><tr>
+<th>ID</th>
+<th>Test Case</th>
+<th>Input</th>
+<th>Expected Output</th>
+<th>Actual Output</th>
+<th>Result</th>
+</tr></thead><tbody>
+<tr>
+<td><b>UT-01</b></td>
+<td>Donor availability state toggle</td>
+<td>State: `AVAILABLE`</td>
+<td>Next state: `RECENTLY_DONATED`</td>
+<td>`RECENTLY_DONATED`</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>UT-02</b></td>
+<td>Hospital ICU bed increment</td>
+<td>Current ICU: 3, Delta: +1</td>
+<td>Next ICU: 4</td>
+<td>4</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>UT-03</b></td>
+<td>Hospital ICU bed decrement floor</td>
+<td>Current ICU: 0, Delta: -1</td>
+<td>Floor at 0 (no negative beds)</td>
+<td>0</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>UT-04</b></td>
+<td>Medicine stock status derivation</td>
+<td>Quantity: 0</td>
+<td>Status: `UNAVAILABLE`</td>
+<td>`UNAVAILABLE`</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>UT-05</b></td>
+<td>Medicine low stock threshold</td>
+<td>Quantity: 10 (< 15)</td>
+<td>Status: `LOW_STOCK`</td>
+<td>`LOW_STOCK`</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>UT-06</b></td>
+<td>Reverse geocoding URL builder</td>
+<td>Lat: 12.9716, Lng: 77.5946</td>
+<td>Formatted Nominatim URL</td>
+<td>Correct query string</td>
+<td><b>Pass</b></td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>7.2 Black-Box Testing</h3>
+<p><b>Table 25: Black-box test results</b></p>
+<table><thead><tr>
+<th>ID</th>
+<th>Test (input / action)</th>
+<th>Expected result</th>
+<th>Actual result</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td><b>BB-01</b></td>
+<td>Register with invalid email</td>
+<td>Form blocks submission with error</td>
+<td>"Enter a valid email"</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-02</b></td>
+<td>Register with password under 6 chars</td>
+<td>Form blocks submission</td>
+<td>"Password must be at least 6 characters"</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-03</b></td>
+<td>Instant demo login as Donor</td>
+<td>Logs in as Marcus Vance (`DONOR`)</td>
+<td>Navigates to `/donor/dashboard` with donor badge</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-04</b></td>
+<td>Filter donors by blood group `O-`</td>
+<td>Displays only `O-` donors</td>
+<td>Only Marcus Vance (`O-`) rendered</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-05</b></td>
+<td>Filter hospitals by Oxygen Ready</td>
+<td>Displays facilities with `hasOxygen: true`</td>
+<td>Apex Metro, St. Jude, Metro Trauma displayed</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-06</b></td>
+<td>Filter 24/7 open pharmacies</td>
+<td>Displays stores open 24 hours</td>
+<td>HealthPlus & MedCare 24/7 displayed</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-07</b></td>
+<td>Submit blood request via modal</td>
+<td>Dispatches alert; notification increment</td>
+<td>Notification badge shows unread count `+1`</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-08</b></td>
+<td>Adjust ICU beds on Hospital dashboard</td>
+<td>Increments ICU available count</td>
+<td>Public `/hospital-finder` shows updated count</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-09</b></td>
+<td>Open `/admin/dashboard` as normal user</td>
+<td>Route guard blocks access</td>
+<td>Redirects to `/unauthorized`</td>
+<td><b>Pass</b></td>
+</tr>
+<tr>
+<td><b>BB-10</b></td>
+<td>Toggle Leaflet Map view in Hospital Finder</td>
+<td>Interactive map renders pins</td>
+<td>Leaflet map displays pins with bed popups</td>
+<td><b>Pass</b></td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<h3>7.3 Bug Tracking Log</h3>
+<p><b>Table 29: Bug log</b></p>
+<table><thead><tr>
+<th>Bug ID</th>
+<th>Description</th>
+<th>Severity</th>
+<th>Status</th>
+<th>Solution / Fix Implemented</th>
+</tr></thead><tbody>
+<tr>
+<td><b>BUG-01</b></td>
+<td>Missing default Leaflet marker assets on production build</td>
+<td>Medium</td>
+<td><b>Resolved</b></td>
+<td>Configured unpkg CDN marker icon overrides in `MapView.jsx`.</td>
+</tr>
+<tr>
+<td><b>BUG-02</b></td>
+<td>Cloud Firestore database returning 404 when unprovisioned</td>
+<td>High</td>
+<td><b>Resolved</b></td>
+<td>Implemented dual-mode storage layer; app automatically runs in reactive local mode.</td>
+</tr>
+<tr>
+<td><b>BUG-03</b></td>
+<td>Bed counter decrements below zero on rapid clicking</td>
+<td>Low</td>
+<td><b>Resolved</b></td>
+<td>Added `Math.max(0, current - 1)` boundary guard in `HospitalDashboard.jsx`.</td>
+</tr>
+<tr>
+<td><b>BUG-04</b></td>
+<td>Notification drawer backdrop not closing on mobile touch</td>
+<td>Low</td>
+<td><b>Resolved</b></td>
+<td>Added touch backdrop listener in `NotificationsDrawer.jsx`.</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>8. Application Deployment</h1>
+<h3>8.1 Cloud Deployment (Netlify Edge & GitHub)</h3>
+<p>The application is deployed live on Netlify's high-speed global CDN edge network:</p>
+<p>* <b>Production URL:</b> `https://lifelinkviva.netlify.app/`</p>
+<p>* <b>GitHub Repository:</b> `https://github.com/kaju2818/lifeLink`</p>
+<p>* <b>Continuous Integration:</b> Netlify watches the `main` branch of `kaju2818/lifeLink` and executes automated production builds upon every Git commit.</p>
+<h3>8.2 Local Hosting</h3>
+<p>To execute LifeLink locally on any development PC:</p>
+<pre><code>
+# 1. Clone the repository
+git clone https://github.com/kaju2818/lifeLink.git
+cd lifeLink
+
+# 2. Install dependencies
+npm install
+
+# 3. Launch Vite local development server
+npm run dev
+# Server ready at http://localhost:5173/
+</code></pre>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>9. Performance & Security Testing</h1>
+<h3>9.1 Basic Load Testing & Benchmarking</h3>
+<p><b>Table 32: Client-side benchmark</b></p>
+<table><thead><tr>
+<th>Metric / Measurement</th>
+<th>Result Observed</th>
+<th>Evaluation</th>
+</tr></thead><tbody>
+<tr>
+<td><b>DOM Content Loaded (Vite Dev / Local)</b></td>
+<td>42 milliseconds</td>
+<td>Extremely fast</td>
+</tr>
+<tr>
+<td><b>Client-Side Route Transition (React Router)</b></td>
+<td>< 15 milliseconds</td>
+<td>Instantaneous</td>
+</tr>
+<tr>
+<td><b>500 Donor Array In-Memory Filter Execution</b></td>
+<td>2.1 milliseconds</td>
+<td>Zero bottleneck</td>
+</tr>
+<tr>
+<td><b>Production Bundle Size (HTML + JS + CSS)</b></td>
+<td>~1.1 MB (includes complete Leaflet & Lucide icon sets)</td>
+<td>Highly optimized</td>
+</tr>
+</tbody></table>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>10. Final Documentation</h1>
+<h3>10.1 Evaluation Against Objectives</h3>
+<p><b>Table 36: Evaluation against objectives</b></p>
+<table><thead><tr>
+<th>Objective</th>
+<th>Evidence in Project</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td>Voluntary blood donor matching by group</td>
+<td>Implemented in `/blood-finder` with 8 blood group filters.</td>
+<td><b>Achieved</b></td>
+</tr>
+<tr>
+<td>Real-time hospital bed & ICU vacancy tracking</td>
+<td>Implemented in `/hospital-finder` and `/hospital/dashboard`.</td>
+<td><b>Achieved</b></td>
+</tr>
+<tr>
+<td>24/7 pharmacy medicine stock discovery</td>
+<td>Implemented in `/medicine-finder` with ₹ pricing and prescription flags.</td>
+<td><b>Achieved</b></td>
+</tr>
+<tr>
+<td>1-Tap emergency SOS broadcast</td>
+<td>Implemented in `/emergency` with GPS geocoding and 108 helpline dials.</td>
+<td><b>Achieved</b></td>
+</tr>
+<tr>
+<td>Role-based stakeholder access control</td>
+<td>5 distinct portals guarded by `ProtectedRoute.jsx`.</td>
+<td><b>Achieved</b></td>
+</tr>
+</tbody></table>
+<h3>10.2 User Manual Summary</h3>
+<p>1. <b>Public Search:</b> Open `https://lifelinkviva.netlify.app/`. Click any discovery tab (Blood, Beds, Medicines).</p>
+<p>2. <b>Emergency SOS:</b> Click the red <b>"EMERGENCY SOS"</b> button in the header or call <b>108</b> directly.</p>
+<p>3. <b>Login & Role Portals:</b> Go to `/login` and select any 1-click demo account (Recipient, Donor, Hospital, Pharmacy, Admin) to immediately evaluate role dashboards.</p>
+<h3>10.3 Conclusion & Future Scope</h3>
+<p>LifeLink successfully establishes a high-speed, zero-cost, real-time healthcare availability platform that mitigates fatal delays during acute medical crises.</p>
+<p><b>Future Roadmap:</b></p>
+<p>1. Direct integration with IoT smart hospital bed pressure sensors.</p>
+<p>2. Automated SMS / WhatsApp emergency alerts via Twilio / Gupshup gateways.</p>
+<p>3. Interoperability with India's Ayushman Bharat Digital Mission (ABDM / ABHA ID).</p>
+<p>4. Machine learning models for predictive regional blood shortage forecasting.</p>
+<hr style='border:0; border-top: 1px solid #cbd5e1; margin: 25px 0;'>
+<p><div style="page-break-after: always;"></div></p>
+<div class='page-break'></div>
+<h1>APPENDIX E: DATA DICTIONARY AND GLOSSARY</h1>
+<h3>E.1 Data Dictionary</h3>
+<p><b>Table 41: Data dictionary</b></p>
+<table><thead><tr>
+<th>Entity / Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr>
+<td>`users.id`</td>
+<td>string (UUID)</td>
+<td>Unique user identification key.</td>
+</tr>
+<tr>
+<td>`users.role`</td>
+<td>string</td>
+<td>Access role: `USER`, `DONOR`, `HOSPITAL`, `PHARMACY`, `ADMIN`.</td>
+</tr>
+<tr>
+<td>`donors.bloodGroup`</td>
+<td>string</td>
+<td>Blood phenotype: `A+`, `A-`, `B+`, `B-`, `AB+`, `AB-`, `O+`, `O-`.</td>
+</tr>
+<tr>
+<td>`donors.availability`</td>
+<td>string</td>
+<td>`AVAILABLE` (ready for dispatch) or `RECENTLY_DONATED` (resting).</td>
+</tr>
+<tr>
+<td>`hospitals.beds.icu`</td>
+<td>object `{total, available}`</td>
+<td>ICU capacity and current vacancy count.</td>
+</tr>
+<tr>
+<td>`medicines.price`</td>
+<td>float</td>
+<td>Unit Maximum Retail Price in Indian Rupees (₹).</td>
+</tr>
+<tr>
+<td>`emergency.status`</td>
+<td>string</td>
+<td>`ACTIVE` (in transit) or `ACCEPTED` (hospital confirmed).</td>
+</tr>
+</tbody></table>
+<h3>E.2 Glossary</h3>
+<p><b>Table 43: Glossary</b></p>
+<table><thead><tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Golden Hour</b></td>
+<td>The first hour following traumatic injury where immediate medical intervention drastically reduces mortality.</td>
+</tr>
+<tr>
+<td><b>ICU</b></td>
+<td>Intensive Care Unit: specialized hospital facility for critically ill patients requiring continuous monitoring.</td>
+</tr>
+<tr>
+<td><b>SDP</b></td>
+<td>Single Donor Platelets: blood component collected via apheresis for severe dengue or oncology emergencies.</td>
+</tr>
+<tr>
+<td><b>RBAC</b></td>
+<td>Role-Based Access Control: restricting system features based on verified user identities.</td>
+</tr>
+<tr>
+<td><b>GIS</b></td>
+<td>Geographic Information System: spatial framework for mapping and geographical analysis.</td>
+</tr>
+<tr>
+<td><b>SPA</b></td>
+<td>Single Page Application: web application that rewrites the current web page with new data from the server.</td>
+</tr>
+<tr>
+<td><b>Nominatim</b></td>
+<td>Open-source search and reverse geocoding engine for OpenStreetMap data.</td>
+</tr>
+<tr>
+<td><b>BaaS</b></td>
+<td>Backend-as-a-Service: cloud architecture providing managed authentication and database persistence.</td>
+</tr>
+<tr>
+<td><b>MoSCoW</b></td>
+<td>Must, Should, Could, Won't: prioritization technique used in software requirement engineering.</td>
+</tr>
+</tbody></table>
+</body></html>

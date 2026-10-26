@@ -1,0 +1,49 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" style="background:#fff; font-family:'Segoe UI',sans-serif;">
+  <text x="450" y="30" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">LifeLink - Project Gantt Schedule (15 Weeks Timeline)</text>
+  
+  <!-- Header Months -->
+  <line x1="220" y1="50" x2="860" y2="50" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="280" y="65" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">July 2026</text>
+  <text x="440" y="65" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">August 2026</text>
+  <text x="600" y="65" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">September 2026</text>
+  <text x="760" y="65" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">October 2026</text>
+  
+  <!-- Grid Lines -->
+  <line x1="220" y1="75" x2="220" y2="360" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="380" y1="75" x2="380" y2="360" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="540" y1="75" x2="540" y2="360" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="700" y1="75" x2="700" y2="360" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="860" y1="75" x2="860" y2="360" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Row 1: Problem & Feasibility -->
+  <text x="20" y="105" font-size="12" fill="#334155" font-weight="600">Problem &amp; Feasibility Study</text>
+  <rect x="220" y="90" width="80" height="22" rx="4" fill="#3b82f6"/>
+  
+  <!-- Row 2: Requirements & MoSCoW -->
+  <text x="20" y="140" font-size="12" fill="#334155" font-weight="600">Requirement Engineering</text>
+  <rect x="260" y="125" width="90" height="22" rx="4" fill="#3b82f6"/>
+
+  <!-- Row 3: UML & Database Modeling -->
+  <text x="20" y="175" font-size="12" fill="#334155" font-weight="600">UML &amp; Firestore Modeling</text>
+  <rect x="330" y="160" width="110" height="22" rx="4" fill="#6366f1"/>
+
+  <!-- Row 4: Frontend Development -->
+  <text x="20" y="210" font-size="12" fill="#334155" font-weight="600">Frontend React &amp; Tailwind</text>
+  <rect x="400" y="195" width="220" height="22" rx="4" fill="#10b981"/>
+
+  <!-- Row 5: Emergency & GIS Integration -->
+  <text x="20" y="245" font-size="12" fill="#334155" font-weight="600">Emergency SOS &amp; Map Engine</text>
+  <rect x="470" y="230" width="180" height="22" rx="4" fill="#10b981"/>
+
+  <!-- Row 6: Testing & Defect Tracking -->
+  <text x="20" y="280" font-size="12" fill="#334155" font-weight="600">Testing &amp; Bug Resolution</text>
+  <rect x="620" y="265" width="140" height="22" rx="4" fill="#f59e0b"/>
+
+  <!-- Row 7: Cloud Deploy & Documentation -->
+  <text x="20" y="315" font-size="12" fill="#334155" font-weight="600">Deployment &amp; Netlify Launch</text>
+  <rect x="710" y="300" width="80" height="22" rx="4" fill="#ef4444"/>
+
+  <!-- Row 8: Final Black Book Submission -->
+  <text x="20" y="350" font-size="12" fill="#334155" font-weight="600">VIVA Black Book Finalization</text>
+  <rect x="760" y="335" width="90" height="22" rx="4" fill="#8b5cf6"/>
+</svg>

@@ -1,0 +1,58 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" style="background:#fff; font-family:'Segoe UI',sans-serif;">
+  <!-- Node 1: Client Device -->
+  <g transform="translate(40, 80)">
+    <rect x="0" y="0" width="240" height="280" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="35" rx="8" fill="#1e293b"/>
+    <text x="120" y="23" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">&lt;&lt;device&gt;&gt; User Client</text>
+    
+    <rect x="20" y="60" width="200" height="90" rx="4" fill="#eff6ff" stroke="#3b82f6"/>
+    <text x="120" y="85" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">&lt;&lt;execution environment&gt;&gt;</text>
+    <text x="120" y="105" font-size="11" fill="#1e3a8a" text-anchor="middle">Modern Web Browser</text>
+    <text x="120" y="125" font-size="10" fill="#3b82f6" text-anchor="middle">Chrome / Edge / Safari / Mobile</text>
+
+    <rect x="20" y="170" width="200" height="80" rx="4" fill="#f0fdf4" stroke="#10b981"/>
+    <text x="120" y="195" font-size="11" font-weight="bold" fill="#065f46" text-anchor="middle">&lt;&lt;artifact&gt;&gt;</text>
+    <text x="120" y="215" font-size="11" fill="#047857" text-anchor="middle">LifeLink React SPA Bundle</text>
+    <text x="120" y="235" font-size="10" fill="#059669" text-anchor="middle">HTML5, JS Bundle, CSS</text>
+  </g>
+
+  <!-- Node 2: Web Hosting CDN -->
+  <g transform="translate(340, 80)">
+    <rect x="0" y="0" width="240" height="280" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="35" rx="8" fill="#1e293b"/>
+    <text x="120" y="23" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">&lt;&lt;cloud server&gt;&gt; Edge CDN</text>
+    
+    <rect x="20" y="60" width="200" height="90" rx="4" fill="#fef3c7" stroke="#d97706"/>
+    <text x="120" y="85" font-size="11" font-weight="bold" fill="#92400e" text-anchor="middle">Netlify Edge Network</text>
+    <text x="120" y="105" font-size="11" fill="#b45309" text-anchor="middle">Global Anycast DNS</text>
+    <text x="120" y="125" font-size="10" fill="#d97706" text-anchor="middle">HTTPS / TLS 1.3 Termination</text>
+
+    <rect x="20" y="170" width="200" height="80" rx="4" fill="#f5f3ff" stroke="#7c3aed"/>
+    <text x="120" y="195" font-size="11" font-weight="bold" fill="#5b21b6" text-anchor="middle">GitHub Repository</text>
+    <text x="120" y="215" font-size="11" fill="#6d28d9" text-anchor="middle">kaju2818/lifeLink</text>
+    <text x="120" y="235" font-size="10" fill="#7c3aed" text-anchor="middle">Continuous Deployment (CI/CD)</text>
+  </g>
+
+  <!-- Node 3: Cloud Database (BaaS) -->
+  <g transform="translate(640, 80)">
+    <rect x="0" y="0" width="230" height="280" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="35" rx="8" fill="#1e293b"/>
+    <text x="115" y="23" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">&lt;&lt;cloud BaaS&gt;&gt; Firebase</text>
+    
+    <rect x="15" y="60" width="200" height="90" rx="4" fill="#fdf2f8" stroke="#db2777"/>
+    <text x="115" y="85" font-size="11" font-weight="bold" fill="#9d174d" text-anchor="middle">Cloud Firestore</text>
+    <text x="115" y="105" font-size="11" fill="#be185d" text-anchor="middle">NoSQL Document Store</text>
+    <text x="115" y="125" font-size="10" fill="#db2777" text-anchor="middle">Realtime Listeners &amp; Rules</text>
+
+    <rect x="15" y="170" width="200" height="80" rx="4" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="115" y="195" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">Firebase Auth</text>
+    <text x="115" y="215" font-size="11" fill="#1d4ed8" text-anchor="middle">JWT Tokens &amp; Security</text>
+  </g>
+
+  <!-- Network Lines -->
+  <line x1="280" y1="180" x2="340" y2="180" stroke="#64748b" stroke-width="2"/>
+  <text x="310" y="170" font-size="10" fill="#64748b" text-anchor="middle">HTTPS</text>
+
+  <line x1="280" y1="240" x2="640" y2="240" stroke="#2563eb" stroke-width="2" stroke-dasharray="4"/>
+  <text x="460" y="230" font-size="10" fill="#2563eb" text-anchor="middle">Firestore REST / WebSocket Sync</text>
+</svg>

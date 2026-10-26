@@ -1,0 +1,34 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" style="background:#fff; font-family:'Segoe UI',sans-serif;">
+  <!-- Tier 1 -->
+  <g transform="translate(50, 30)">
+    <rect x="0" y="0" width="800" height="80" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#1e40af">1. Presentation Tier (Client Browser / Mobile PWA)</text>
+    <text x="20" y="55" font-size="11" fill="#3b82f6">React 18 SPA | Tailwind CSS | Lucide Icons | Leaflet GIS Interactive Maps | HTML5 Geolocation API</text>
+  </g>
+
+  <!-- Tier 2 -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="800" height="80" rx="8" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#065f46">2. Application &amp; Routing Tier</text>
+    <text x="20" y="55" font-size="11" fill="#047857">React Router v6 | Protected Routes | Role-Based Access Control (RBAC) | State Sync (AuthContext)</text>
+  </g>
+
+  <!-- Tier 3 -->
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="800" height="80" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#92400e">3. Computational &amp; Dispatch Logic Tier</text>
+    <text x="20" y="55" font-size="11" fill="#b45309">Haversine Distance Algorithm | 3-Level Triage Priority Scorer | Stock Reservation Manager (2h TTL)</text>
+  </g>
+
+  <!-- Tier 4 -->
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="800" height="80" rx="8" fill="#fdf2f8" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="20" y="30" font-size="14" font-weight="bold" fill="#9d174d">4. Data Access &amp; Cloud Persistence Tier</text>
+    <text x="20" y="55" font-size="11" fill="#be185d">Google Cloud Firestore (lifelink1-bcd99) | Firebase Auth | Fallback Local Reactive In-Memory State</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="450" y1="110" x2="450" y2="140" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="220" x2="450" y2="250" stroke="#64748b" stroke-width="2"/>
+  <line x1="450" y1="330" x2="450" y2="360" stroke="#64748b" stroke-width="2"/>
+</svg>

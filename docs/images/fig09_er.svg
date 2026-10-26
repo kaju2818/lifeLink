@@ -1,0 +1,64 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" style="background:#fff; font-family:'Segoe UI',sans-serif;">
+  <!-- USERS -->
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="200" height="150" fill="#f8fafc" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="200" height="28" fill="#0284c7"/><text x="100" y="19" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">USERS</text>
+    <text x="10" y="48" font-size="11" fill="#0f172a">PK  uid (UUID)</text>
+    <text x="10" y="68" font-size="11" fill="#475569">    email (VARCHAR)</text>
+    <text x="10" y="88" font-size="11" fill="#475569">    name (VARCHAR)</text>
+    <text x="10" y="108" font-size="11" fill="#475569">    role (ENUM: USER,ADMIN)</text>
+    <text x="10" y="128" font-size="11" fill="#475569">    created_at (TIMESTAMP)</text>
+  </g>
+
+  <!-- HOSPITALS -->
+  <g transform="translate(340, 40)">
+    <rect x="0" y="0" width="220" height="170" fill="#f8fafc" stroke="#059669" stroke-width="1.5"/>
+    <rect x="0" y="0" width="220" height="28" fill="#059669"/><text x="110" y="19" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">HOSPITALS</text>
+    <text x="10" y="48" font-size="11" fill="#0f172a">PK  hospital_id (VARCHAR)</text>
+    <text x="10" y="68" font-size="11" fill="#475569">    name (VARCHAR)</text>
+    <text x="10" y="88" font-size="11" fill="#475569">    address (VARCHAR)</text>
+    <text x="10" y="108" font-size="11" fill="#475569">    latitude, longitude (DEC)</text>
+    <text x="10" y="128" font-size="11" fill="#475569">    icu_beds (INTEGER)</text>
+    <text x="10" y="148" font-size="11" fill="#475569">    oxygen_beds (INTEGER)</text>
+  </g>
+
+  <!-- BLOOD_DONORS -->
+  <g transform="translate(640, 40)">
+    <rect x="0" y="0" width="220" height="160" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+    <rect x="0" y="0" width="220" height="28" fill="#dc2626"/><text x="110" y="19" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">BLOOD_DONORS</text>
+    <text x="10" y="48" font-size="11" fill="#0f172a">PK  donor_id (VARCHAR)</text>
+    <text x="10" y="68" font-size="11" fill="#475569">    name (VARCHAR)</text>
+    <text x="10" y="88" font-size="11" fill="#475569">    blood_group (ENUM)</text>
+    <text x="10" y="108" font-size="11" fill="#475569">    phone (VARCHAR)</text>
+    <text x="10" y="128" font-size="11" fill="#475569">    is_available (BOOLEAN)</text>
+    <text x="10" y="148" font-size="11" fill="#475569">    last_donation (DATE)</text>
+  </g>
+
+  <!-- MEDICINES -->
+  <g transform="translate(40, 270)">
+    <rect x="0" y="0" width="220" height="160" fill="#f8fafc" stroke="#d97706" stroke-width="1.5"/>
+    <rect x="0" y="0" width="220" height="28" fill="#d97706"/><text x="110" y="19" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">MEDICINES</text>
+    <text x="10" y="48" font-size="11" fill="#0f172a">PK  medicine_id (VARCHAR)</text>
+    <text x="10" y="68" font-size="11" fill="#475569">    brand_name (VARCHAR)</text>
+    <text x="10" y="88" font-size="11" fill="#475569">    composition (VARCHAR)</text>
+    <text x="10" y="108" font-size="11" fill="#475569">    dosage (VARCHAR)</text>
+    <text x="10" y="128" font-size="11" fill="#475569">    stock_quantity (INTEGER)</text>
+    <text x="10" y="148" font-size="11" fill="#475569">    is_restricted (BOOLEAN)</text>
+  </g>
+
+  <!-- EMERGENCY_REQUESTS -->
+  <g transform="translate(340, 270)">
+    <rect x="0" y="0" width="240" height="170" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="0" y="0" width="240" height="28" fill="#7c3aed"/><text x="120" y="19" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">EMERGENCY_REQUESTS</text>
+    <text x="10" y="48" font-size="11" fill="#0f172a">PK  request_id (VARCHAR)</text>
+    <text x="10" y="68" font-size="11" fill="#475569">FK  requester_uid (UUID)</text>
+    <text x="10" y="88" font-size="11" fill="#475569">FK  allocated_hospital_id (VARCHAR)</text>
+    <text x="10" y="108" font-size="11" fill="#475569">    triage_priority (HIGH/CRITICAL)</text>
+    <text x="10" y="128" font-size="11" fill="#475569">    status (PENDING/DISPATCHED)</text>
+    <text x="10" y="148" font-size="11" fill="#475569">    timestamp (TIMESTAMP)</text>
+  </g>
+
+  <!-- Relationships -->
+  <line x1="240" y1="115" x2="340" y2="340" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3"/>
+  <line x1="450" y1="210" x2="450" y2="270" stroke="#94a3b8" stroke-width="1.5"/>
+</svg>
