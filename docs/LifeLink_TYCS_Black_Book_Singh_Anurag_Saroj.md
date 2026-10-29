@@ -1,4 +1,4 @@
-# A MINI PROJECT REPORT (BLACK BOOK)
+﻿# A MINI PROJECT REPORT (BLACK BOOK)
 ## ON
 # **LifeLink — Healthcare Availability & Emergency Assistance**
 
@@ -12,7 +12,7 @@
 
 **Submitted by:**
 ### **SINGH ANURAG SAROJ**
-**Roll No: 102** &nbsp;|&nbsp; **Seat No: [Seat Number]** &nbsp;|&nbsp; **PRN: [PRN Number]**
+**Roll No: 102** &nbsp;|&nbsp; **Seat No: ___________** &nbsp;|&nbsp; **PRN: ___________**
 
 <br/>
 
@@ -55,7 +55,7 @@ VIVA College, Virar (W) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 __________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __________________________  
 **Internal Examiner** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **External Examiner**  
 
-**Date:** [Date]  
+**Date:** ___________  
 **Place:** Virar, Mumbai
 
 ---
